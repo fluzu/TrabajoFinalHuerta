@@ -1,0 +1,43 @@
+file(REMOVE_RECURSE
+  "CMakeFiles/TestLCDi2c.elf.dir/Core/Src/DHT.c.obj"
+  "CMakeFiles/TestLCDi2c.elf.dir/Core/Src/Timer_Delay.c.obj"
+  "CMakeFiles/TestLCDi2c.elf.dir/Core/Src/gpio.c.obj"
+  "CMakeFiles/TestLCDi2c.elf.dir/Core/Src/keypad.c.obj"
+  "CMakeFiles/TestLCDi2c.elf.dir/Core/Src/lcd_i2cModule.c.obj"
+  "CMakeFiles/TestLCDi2c.elf.dir/Core/Src/main.c.obj"
+  "CMakeFiles/TestLCDi2c.elf.dir/Core/Src/stm32f4xx_hal_msp.c.obj"
+  "CMakeFiles/TestLCDi2c.elf.dir/Core/Src/stm32f4xx_it.c.obj"
+  "CMakeFiles/TestLCDi2c.elf.dir/Core/Src/syscalls.c.obj"
+  "CMakeFiles/TestLCDi2c.elf.dir/Core/Src/sysmem.c.obj"
+  "CMakeFiles/TestLCDi2c.elf.dir/Core/Src/system_stm32f4xx.c.obj"
+  "CMakeFiles/TestLCDi2c.elf.dir/Core/Startup/startup_stm32f411vetx.s.obj"
+  "CMakeFiles/TestLCDi2c.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj"
+  "CMakeFiles/TestLCDi2c.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc.c.obj"
+  "CMakeFiles/TestLCDi2c.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c.obj"
+  "CMakeFiles/TestLCDi2c.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj"
+  "CMakeFiles/TestLCDi2c.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj"
+  "CMakeFiles/TestLCDi2c.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c.obj"
+  "CMakeFiles/TestLCDi2c.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c.obj"
+  "CMakeFiles/TestLCDi2c.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c.obj"
+  "CMakeFiles/TestLCDi2c.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c.obj"
+  "CMakeFiles/TestLCDi2c.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c.obj"
+  "CMakeFiles/TestLCDi2c.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj"
+  "CMakeFiles/TestLCDi2c.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c.c.obj"
+  "CMakeFiles/TestLCDi2c.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c_ex.c.obj"
+  "CMakeFiles/TestLCDi2c.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c.obj"
+  "CMakeFiles/TestLCDi2c.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c.obj"
+  "CMakeFiles/TestLCDi2c.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj"
+  "CMakeFiles/TestLCDi2c.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c.obj"
+  "CMakeFiles/TestLCDi2c.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rtc.c.obj"
+  "CMakeFiles/TestLCDi2c.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rtc_ex.c.obj"
+  "CMakeFiles/TestLCDi2c.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj"
+  "CMakeFiles/TestLCDi2c.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c.obj"
+  "TestLCDi2c.elf"
+  "TestLCDi2c.elf.manifest"
+  "TestLCDi2c.elf.pdb"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang ASM C)
+  include(CMakeFiles/TestLCDi2c.elf.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()
