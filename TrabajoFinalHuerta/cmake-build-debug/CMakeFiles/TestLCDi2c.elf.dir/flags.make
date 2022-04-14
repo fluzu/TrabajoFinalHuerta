@@ -7,11 +7,11 @@ ASM_FLAGS = -g   -mcpu=cortex-m4 -mthumb -mthumb-interwork -ffunction-sections -
 
 ASM_DEFINES = -DDEBUG -DSTM32F411xE -DUSE_HAL_DRIVER
 
-ASM_INCLUDES = -IC:\Users\Facu\DOCUME~1\TRABAJ~1\TRABAJ~1\Core\Inc -IC:\Users\Facu\DOCUME~1\TRABAJ~1\TRABAJ~1\Drivers\STM32F~1\Inc -IC:\Users\Facu\DOCUME~1\TRABAJ~1\TRABAJ~1\Drivers\STM32F~1\Inc\Legacy -IC:\Users\Facu\DOCUME~1\TRABAJ~1\TRABAJ~1\Drivers\CMSIS\Device\ST\STM32F~1\Include -IC:\Users\Facu\DOCUME~1\TRABAJ~1\TRABAJ~1\Drivers\CMSIS\Include 
+ASM_INCLUDES = -IC:\Users\Facu\DOCUME~1\TRABAJ~1\TRABAJ~1\TRABAJ~1\Core\Inc -IC:\Users\Facu\DOCUME~1\TRABAJ~1\TRABAJ~1\TRABAJ~1\Drivers\STM32F~1\Inc -IC:\Users\Facu\DOCUME~1\TRABAJ~1\TRABAJ~1\TRABAJ~1\Drivers\STM32F~1\Inc\Legacy -IC:\Users\Facu\DOCUME~1\TRABAJ~1\TRABAJ~1\TRABAJ~1\Drivers\CMSIS\Device\ST\STM32F~1\Include -IC:\Users\Facu\DOCUME~1\TRABAJ~1\TRABAJ~1\TRABAJ~1\Drivers\CMSIS\Include 
 
 C_FLAGS = -g   -mcpu=cortex-m4 -mthumb -mthumb-interwork -ffunction-sections -fdata-sections -fno-common -fmessage-length=0 -Og -g -std=gnu11
 
 C_DEFINES = -DDEBUG -DSTM32F411xE -DUSE_HAL_DRIVER
 
-C_INCLUDES = -IC:\Users\Facu\DOCUME~1\TRABAJ~1\TRABAJ~1\Core\Inc -IC:\Users\Facu\DOCUME~1\TRABAJ~1\TRABAJ~1\Drivers\STM32F~1\Inc -IC:\Users\Facu\DOCUME~1\TRABAJ~1\TRABAJ~1\Drivers\STM32F~1\Inc\Legacy -IC:\Users\Facu\DOCUME~1\TRABAJ~1\TRABAJ~1\Drivers\CMSIS\Device\ST\STM32F~1\Include -IC:\Users\Facu\DOCUME~1\TRABAJ~1\TRABAJ~1\Drivers\CMSIS\Include 
+C_INCLUDES = -IC:\Users\Facu\DOCUME~1\TRABAJ~1\TRABAJ~1\TRABAJ~1\Core\Inc -IC:\Users\Facu\DOCUME~1\TRABAJ~1\TRABAJ~1\TRABAJ~1\Drivers\STM32F~1\Inc -IC:\Users\Facu\DOCUME~1\TRABAJ~1\TRABAJ~1\TRABAJ~1\Drivers\STM32F~1\Inc\Legacy -IC:\Users\Facu\DOCUME~1\TRABAJ~1\TRABAJ~1\TRABAJ~1\Drivers\CMSIS\Device\ST\STM32F~1\Include -IC:\Users\Facu\DOCUME~1\TRABAJ~1\TRABAJ~1\TRABAJ~1\Drivers\CMSIS\Include 
 

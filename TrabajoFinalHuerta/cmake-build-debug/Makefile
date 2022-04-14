@@ -67,10 +67,10 @@ RM = "C:\Program Files\JetBrains\CLion 2020.2.1\bin\cmake\win\bin\cmake.exe" -E 
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "C:\Users\Facu\Documents\TRABAJO FINAL\TrabajoFinalHuerta"
+CMAKE_SOURCE_DIR = "C:\Users\Facu\Documents\TRABAJO FINAL\TrabajoFinalHuerta\TrabajoFinalHuerta"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "C:\Users\Facu\Documents\TRABAJO FINAL\TrabajoFinalHuerta\cmake-build-debug"
+CMAKE_BINARY_DIR = "C:\Users\Facu\Documents\TRABAJO FINAL\TrabajoFinalHuerta\TrabajoFinalHuerta\cmake-build-debug"
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -99,9 +99,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Facu\Documents\TRABAJO FINAL\TrabajoFinalHuerta\cmake-build-debug\CMakeFiles" "C:\Users\Facu\Documents\TRABAJO FINAL\TrabajoFinalHuerta\cmake-build-debug\CMakeFiles\progress.marks"
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Facu\Documents\TRABAJO FINAL\TrabajoFinalHuerta\TrabajoFinalHuerta\cmake-build-debug\CMakeFiles" "C:\Users\Facu\Documents\TRABAJO FINAL\TrabajoFinalHuerta\TrabajoFinalHuerta\cmake-build-debug\CMakeFiles\progress.marks"
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Facu\Documents\TRABAJO FINAL\TrabajoFinalHuerta\cmake-build-debug\CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Facu\Documents\TRABAJO FINAL\TrabajoFinalHuerta\TrabajoFinalHuerta\cmake-build-debug\CMakeFiles" 0
 .PHONY : all
 
 # The main clean target
@@ -195,6 +195,33 @@ Core/Src/Timer_Delay.s: Core/Src/Timer_Delay.c.s
 Core/Src/Timer_Delay.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\TestLCDi2c.elf.dir\build.make CMakeFiles/TestLCDi2c.elf.dir/Core/Src/Timer_Delay.c.s
 .PHONY : Core/Src/Timer_Delay.c.s
+
+Core/Src/bsp.obj: Core/Src/bsp.c.obj
+
+.PHONY : Core/Src/bsp.obj
+
+# target to build an object file
+Core/Src/bsp.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\TestLCDi2c.elf.dir\build.make CMakeFiles/TestLCDi2c.elf.dir/Core/Src/bsp.c.obj
+.PHONY : Core/Src/bsp.c.obj
+
+Core/Src/bsp.i: Core/Src/bsp.c.i
+
+.PHONY : Core/Src/bsp.i
+
+# target to preprocess a source file
+Core/Src/bsp.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\TestLCDi2c.elf.dir\build.make CMakeFiles/TestLCDi2c.elf.dir/Core/Src/bsp.c.i
+.PHONY : Core/Src/bsp.c.i
+
+Core/Src/bsp.s: Core/Src/bsp.c.s
+
+.PHONY : Core/Src/bsp.s
+
+# target to generate assembly for a file
+Core/Src/bsp.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\TestLCDi2c.elf.dir\build.make CMakeFiles/TestLCDi2c.elf.dir/Core/Src/bsp.c.s
+.PHONY : Core/Src/bsp.c.s
 
 Core/Src/gpio.obj: Core/Src/gpio.c.obj
 
@@ -1030,6 +1057,9 @@ help:
 	@echo ... Core/Src/Timer_Delay.obj
 	@echo ... Core/Src/Timer_Delay.i
 	@echo ... Core/Src/Timer_Delay.s
+	@echo ... Core/Src/bsp.obj
+	@echo ... Core/Src/bsp.i
+	@echo ... Core/Src/bsp.s
 	@echo ... Core/Src/gpio.obj
 	@echo ... Core/Src/gpio.i
 	@echo ... Core/Src/gpio.s

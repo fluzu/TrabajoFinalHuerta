@@ -12,9 +12,9 @@
 stm32f4xx_hal.h
 ../Core/Inc/stm32f4xx_hal.h
 
-../Core/Inc/gpio.h
-stm32f4xx_hal_def.h
-../Core/Inc/stm32f4xx_hal_def.h
+../Core/Inc/bsp.h
+stm32f4xx_hal.h
+../Core/Inc/stm32f4xx_hal.h
 
 ../Core/Inc/keypad.h
 stm32f4xx_hal_def.h
@@ -23,8 +23,6 @@ stm32f4xx_hal_def.h
 ../Core/Inc/lcd_i2cModule.h
 stm32f4xx_hal.h
 ../Core/Inc/stm32f4xx_hal.h
-
-../Core/Inc/lcd_userConf.h
 
 ../Core/Inc/main.h
 stm32f4xx_hal.h
@@ -127,8 +125,6 @@ stm32f4xx_hal_lptim.h
 ../Core/Inc/stm32f4xx_hal_lptim.h
 stm32f4xx_hal_mmc.h
 ../Core/Inc/stm32f4xx_hal_mmc.h
-
-../Core/Inc/stm32f4xx_it.h
 
 ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f411xe.h
 core_cm4.h
@@ -352,169 +348,17 @@ stm32f4xx_hal_tim_ex.h
 stm32f4xx_hal_def.h
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h
 
-C:/Users/Facu/Documents/TRABAJO FINAL/TrabajoFinalHuerta/Core/Src/DHT.c
-stm32f4xx_hal.h
-C:/Users/Facu/Documents/TRABAJO FINAL/TrabajoFinalHuerta/Core/Src/stm32f4xx_hal.h
-Timer_Delay.h
-C:/Users/Facu/Documents/TRABAJO FINAL/TrabajoFinalHuerta/Core/Src/Timer_Delay.h
-DHT.h
-C:/Users/Facu/Documents/TRABAJO FINAL/TrabajoFinalHuerta/Core/Src/DHT.h
-
-C:/Users/Facu/Documents/TRABAJO FINAL/TrabajoFinalHuerta/Core/Src/Timer_Delay.c
-Timer_Delay.h
-C:/Users/Facu/Documents/TRABAJO FINAL/TrabajoFinalHuerta/Core/Src/Timer_Delay.h
-
-C:/Users/Facu/Documents/TRABAJO FINAL/TrabajoFinalHuerta/Core/Src/gpio.c
-stm32f4xx_hal.h
-C:/Users/Facu/Documents/TRABAJO FINAL/TrabajoFinalHuerta/Core/Src/stm32f4xx_hal.h
-gpio.h
-C:/Users/Facu/Documents/TRABAJO FINAL/TrabajoFinalHuerta/Core/Src/gpio.h
-
-C:/Users/Facu/Documents/TRABAJO FINAL/TrabajoFinalHuerta/Core/Src/keypad.c
-stm32f4xx_hal.h
-C:/Users/Facu/Documents/TRABAJO FINAL/TrabajoFinalHuerta/Core/Src/stm32f4xx_hal.h
-keypad.h
-C:/Users/Facu/Documents/TRABAJO FINAL/TrabajoFinalHuerta/Core/Src/keypad.h
-
-C:/Users/Facu/Documents/TRABAJO FINAL/TrabajoFinalHuerta/Core/Src/lcd_i2cModule.c
+C:/Users/Facu/Documents/TRABAJO FINAL/TrabajoFinalHuerta/TrabajoFinalHuerta/Core/Src/main.c
+main.h
+C:/Users/Facu/Documents/TRABAJO FINAL/TrabajoFinalHuerta/TrabajoFinalHuerta/Core/Src/main.h
+bsp.h
+C:/Users/Facu/Documents/TRABAJO FINAL/TrabajoFinalHuerta/TrabajoFinalHuerta/Core/Src/bsp.h
 lcd_i2cModule.h
-C:/Users/Facu/Documents/TRABAJO FINAL/TrabajoFinalHuerta/Core/Src/lcd_i2cModule.h
-lcd_userConf.h
-C:/Users/Facu/Documents/TRABAJO FINAL/TrabajoFinalHuerta/Core/Src/lcd_userConf.h
-string.h
--
-
-C:/Users/Facu/Documents/TRABAJO FINAL/TrabajoFinalHuerta/Core/Src/main.c
-main.h
-C:/Users/Facu/Documents/TRABAJO FINAL/TrabajoFinalHuerta/Core/Src/main.h
-lcd_i2cModule.h
-C:/Users/Facu/Documents/TRABAJO FINAL/TrabajoFinalHuerta/Core/Src/lcd_i2cModule.h
+C:/Users/Facu/Documents/TRABAJO FINAL/TrabajoFinalHuerta/TrabajoFinalHuerta/Core/Src/lcd_i2cModule.h
 Timer_Delay.h
-C:/Users/Facu/Documents/TRABAJO FINAL/TrabajoFinalHuerta/Core/Src/Timer_Delay.h
+C:/Users/Facu/Documents/TRABAJO FINAL/TrabajoFinalHuerta/TrabajoFinalHuerta/Core/Src/Timer_Delay.h
 DHT.h
-C:/Users/Facu/Documents/TRABAJO FINAL/TrabajoFinalHuerta/Core/Src/DHT.h
+C:/Users/Facu/Documents/TRABAJO FINAL/TrabajoFinalHuerta/TrabajoFinalHuerta/Core/Src/DHT.h
 keypad.h
-C:/Users/Facu/Documents/TRABAJO FINAL/TrabajoFinalHuerta/Core/Src/keypad.h
-
-C:/Users/Facu/Documents/TRABAJO FINAL/TrabajoFinalHuerta/Core/Src/stm32f4xx_hal_msp.c
-main.h
-C:/Users/Facu/Documents/TRABAJO FINAL/TrabajoFinalHuerta/Core/Src/main.h
-
-C:/Users/Facu/Documents/TRABAJO FINAL/TrabajoFinalHuerta/Core/Src/stm32f4xx_it.c
-main.h
-C:/Users/Facu/Documents/TRABAJO FINAL/TrabajoFinalHuerta/Core/Src/main.h
-stm32f4xx_it.h
-C:/Users/Facu/Documents/TRABAJO FINAL/TrabajoFinalHuerta/Core/Src/stm32f4xx_it.h
-
-C:/Users/Facu/Documents/TRABAJO FINAL/TrabajoFinalHuerta/Core/Src/syscalls.c
-sys/stat.h
--
-stdlib.h
--
-errno.h
--
-stdio.h
--
-signal.h
--
-time.h
--
-sys/time.h
--
-sys/times.h
--
-
-C:/Users/Facu/Documents/TRABAJO FINAL/TrabajoFinalHuerta/Core/Src/sysmem.c
-errno.h
--
-stdint.h
--
-
-C:/Users/Facu/Documents/TRABAJO FINAL/TrabajoFinalHuerta/Core/Src/system_stm32f4xx.c
-stm32f4xx.h
-C:/Users/Facu/Documents/TRABAJO FINAL/TrabajoFinalHuerta/Core/Src/stm32f4xx.h
-
-C:/Users/Facu/Documents/TRABAJO FINAL/TrabajoFinalHuerta/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c
-stm32f4xx_hal.h
-C:/Users/Facu/Documents/TRABAJO FINAL/TrabajoFinalHuerta/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.h
-
-C:/Users/Facu/Documents/TRABAJO FINAL/TrabajoFinalHuerta/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc.c
-stm32f4xx_hal.h
-C:/Users/Facu/Documents/TRABAJO FINAL/TrabajoFinalHuerta/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.h
-
-C:/Users/Facu/Documents/TRABAJO FINAL/TrabajoFinalHuerta/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c
-stm32f4xx_hal.h
-C:/Users/Facu/Documents/TRABAJO FINAL/TrabajoFinalHuerta/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.h
-
-C:/Users/Facu/Documents/TRABAJO FINAL/TrabajoFinalHuerta/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c
-stm32f4xx_hal.h
-C:/Users/Facu/Documents/TRABAJO FINAL/TrabajoFinalHuerta/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.h
-
-C:/Users/Facu/Documents/TRABAJO FINAL/TrabajoFinalHuerta/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c
-stm32f4xx_hal.h
-C:/Users/Facu/Documents/TRABAJO FINAL/TrabajoFinalHuerta/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.h
-
-C:/Users/Facu/Documents/TRABAJO FINAL/TrabajoFinalHuerta/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c
-stm32f4xx_hal.h
-C:/Users/Facu/Documents/TRABAJO FINAL/TrabajoFinalHuerta/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.h
-
-C:/Users/Facu/Documents/TRABAJO FINAL/TrabajoFinalHuerta/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c
-stm32f4xx_hal.h
-C:/Users/Facu/Documents/TRABAJO FINAL/TrabajoFinalHuerta/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.h
-
-C:/Users/Facu/Documents/TRABAJO FINAL/TrabajoFinalHuerta/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c
-stm32f4xx_hal.h
-C:/Users/Facu/Documents/TRABAJO FINAL/TrabajoFinalHuerta/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.h
-
-C:/Users/Facu/Documents/TRABAJO FINAL/TrabajoFinalHuerta/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c
-stm32f4xx_hal.h
-C:/Users/Facu/Documents/TRABAJO FINAL/TrabajoFinalHuerta/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.h
-
-C:/Users/Facu/Documents/TRABAJO FINAL/TrabajoFinalHuerta/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c
-stm32f4xx_hal.h
-C:/Users/Facu/Documents/TRABAJO FINAL/TrabajoFinalHuerta/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.h
-
-C:/Users/Facu/Documents/TRABAJO FINAL/TrabajoFinalHuerta/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c
-stm32f4xx_hal.h
-C:/Users/Facu/Documents/TRABAJO FINAL/TrabajoFinalHuerta/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.h
-
-C:/Users/Facu/Documents/TRABAJO FINAL/TrabajoFinalHuerta/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c.c
-stm32f4xx_hal.h
-C:/Users/Facu/Documents/TRABAJO FINAL/TrabajoFinalHuerta/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.h
-
-C:/Users/Facu/Documents/TRABAJO FINAL/TrabajoFinalHuerta/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c_ex.c
-stm32f4xx_hal.h
-C:/Users/Facu/Documents/TRABAJO FINAL/TrabajoFinalHuerta/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.h
-
-C:/Users/Facu/Documents/TRABAJO FINAL/TrabajoFinalHuerta/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c
-stm32f4xx_hal.h
-C:/Users/Facu/Documents/TRABAJO FINAL/TrabajoFinalHuerta/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.h
-
-C:/Users/Facu/Documents/TRABAJO FINAL/TrabajoFinalHuerta/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c
-stm32f4xx_hal.h
-C:/Users/Facu/Documents/TRABAJO FINAL/TrabajoFinalHuerta/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.h
-
-C:/Users/Facu/Documents/TRABAJO FINAL/TrabajoFinalHuerta/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c
-stm32f4xx_hal.h
-C:/Users/Facu/Documents/TRABAJO FINAL/TrabajoFinalHuerta/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.h
-
-C:/Users/Facu/Documents/TRABAJO FINAL/TrabajoFinalHuerta/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c
-stm32f4xx_hal.h
-C:/Users/Facu/Documents/TRABAJO FINAL/TrabajoFinalHuerta/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.h
-
-C:/Users/Facu/Documents/TRABAJO FINAL/TrabajoFinalHuerta/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rtc.c
-stm32f4xx_hal.h
-C:/Users/Facu/Documents/TRABAJO FINAL/TrabajoFinalHuerta/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.h
-
-C:/Users/Facu/Documents/TRABAJO FINAL/TrabajoFinalHuerta/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rtc_ex.c
-stm32f4xx_hal.h
-C:/Users/Facu/Documents/TRABAJO FINAL/TrabajoFinalHuerta/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.h
-
-C:/Users/Facu/Documents/TRABAJO FINAL/TrabajoFinalHuerta/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c
-stm32f4xx_hal.h
-C:/Users/Facu/Documents/TRABAJO FINAL/TrabajoFinalHuerta/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.h
-
-C:/Users/Facu/Documents/TRABAJO FINAL/TrabajoFinalHuerta/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c
-stm32f4xx_hal.h
-C:/Users/Facu/Documents/TRABAJO FINAL/TrabajoFinalHuerta/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.h
+C:/Users/Facu/Documents/TRABAJO FINAL/TrabajoFinalHuerta/TrabajoFinalHuerta/Core/Src/keypad.h
 

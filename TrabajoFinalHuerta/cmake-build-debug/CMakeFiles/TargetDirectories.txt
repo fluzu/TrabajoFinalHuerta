@@ -1,3 +1,3 @@
-C:/Users/Facu/Documents/TRABAJO FINAL/TrabajoFinalHuerta/cmake-build-debug/CMakeFiles/TestLCDi2c.elf.dir
-C:/Users/Facu/Documents/TRABAJO FINAL/TrabajoFinalHuerta/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/Facu/Documents/TRABAJO FINAL/TrabajoFinalHuerta/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+C:/Users/Facu/Documents/TRABAJO FINAL/TrabajoFinalHuerta/TrabajoFinalHuerta/cmake-build-debug/CMakeFiles/TestLCDi2c.elf.dir
+C:/Users/Facu/Documents/TRABAJO FINAL/TrabajoFinalHuerta/TrabajoFinalHuerta/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Facu/Documents/TRABAJO FINAL/TrabajoFinalHuerta/TrabajoFinalHuerta/cmake-build-debug/CMakeFiles/rebuild_cache.dir

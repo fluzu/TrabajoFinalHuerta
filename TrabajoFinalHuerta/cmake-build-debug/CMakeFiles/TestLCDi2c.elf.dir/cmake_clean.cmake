@@ -1,6 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/TestLCDi2c.elf.dir/Core/Src/DHT.c.obj"
   "CMakeFiles/TestLCDi2c.elf.dir/Core/Src/Timer_Delay.c.obj"
+  "CMakeFiles/TestLCDi2c.elf.dir/Core/Src/bsp.c.obj"
   "CMakeFiles/TestLCDi2c.elf.dir/Core/Src/gpio.c.obj"
   "CMakeFiles/TestLCDi2c.elf.dir/Core/Src/keypad.c.obj"
   "CMakeFiles/TestLCDi2c.elf.dir/Core/Src/lcd_i2cModule.c.obj"

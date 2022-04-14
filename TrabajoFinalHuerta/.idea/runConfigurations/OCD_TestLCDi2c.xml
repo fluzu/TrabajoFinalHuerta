@@ -1,5 +1,5 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration name="OCD TestLCDi2c" type="com.jetbrains.cidr.embedded.openocd.conf.type" factoryName="com.jetbrains.cidr.embedded.openocd.conf.factory" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="TestLCDi2c" TARGET_NAME="TestLCDi2c.elf" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="TestLCDi2c" RUN_TARGET_NAME="TestLCDi2c.elf">
+  <configuration default="false" name="OCD TestLCDi2c" type="com.jetbrains.cidr.embedded.openocd.conf.type" factoryName="com.jetbrains.cidr.embedded.openocd.conf.factory" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="TestLCDi2c" TARGET_NAME="TestLCDi2c.elf" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="TestLCDi2c" RUN_TARGET_NAME="TestLCDi2c.elf">
     <openocd gdb-port="3333" telnet-port="4444" board-config="board/stm32f4discovery.cfg" reset-type="INIT" download-type="ALWAYS" />
     <method v="2">
       <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
