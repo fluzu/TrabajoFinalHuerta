@@ -45,30 +45,23 @@
 
 /* Private variables ---------------------------------------------------------*/
 
-static ADC_HandleTypeDef hadc1;
-//DMA_HandleTypeDef hdma_adc1;
+extern ADC_HandleTypeDef hadc1;
+extern DMA_HandleTypeDef hdma_adc1;  //INCECESARIO??????
 
-//I2C_HandleTypeDef hi2c1;
+extern I2C_HandleTypeDef hi2c1;
 
-//RTC_HandleTypeDef hrtc;
+extern RTC_HandleTypeDef hrtc;
 
-static TIM_HandleTypeDef htim2;
-static TIM_HandleTypeDef htim3;
+extern TIM_HandleTypeDef htim2;
+extern TIM_HandleTypeDef htim3;
 
 /* USER CODE BEGIN PV */
 
-static DHT_DataTypeDef DHT22;
+extern DHT_DataTypeDef DHT22;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
-//void SystemClock_Config(void);
-//static void MX_GPIO_Init(void);
-//static void MX_DMA_Init(void);
-//static void MX_I2C1_Init(void);
-//static void MX_TIM3_Init(void);
-//static void MX_ADC1_Init(void);
-//static void MX_TIM2_Init(void);
-//static void MX_RTC_Init(void);
+
 /* USER CODE BEGIN PFP */
 
 /* USER CODE END PFP */
@@ -76,7 +69,7 @@ static DHT_DataTypeDef DHT22;
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
 
-static uint32_t value_adc[3]; // almacenar datos adc
+extern uint32_t value_adc[3]; // almacenar datos adc
 
 void LCD_Temperatura(float temperatura) {
     LCD_SetCursor(1, 4);
@@ -125,26 +118,18 @@ int main(void)
   /* MCU Configuration--------------------------------------------------------*/
 
   /* Reset of all peripherals, Initializes the Flash interface and the Systick. */
- // HAL_Init();
     BSP_Init();
   /* USER CODE BEGIN Init */
   /* USER CODE END Init */
 
   /* Configure the system clock */
- // SystemClock_Config();
 
   /* USER CODE BEGIN SysInit */
 
   /* USER CODE END SysInit */
 
   /* Initialize all configured peripherals */
- // MX_GPIO_Init();
- // MX_DMA_Init();
-//  MX_I2C1_Init();
- // MX_TIM3_Init();
- // MX_ADC1_Init();
-//  MX_TIM2_Init();
- // MX_RTC_Init();
+
   /* USER CODE BEGIN 2 */
 
   ///1)set time
@@ -159,15 +144,11 @@ int main(void)
 //  sDate.Year = 20;
 //  HAL_RTC_SetDate(&hrtc, &sDate, RTC_FORMAT_BIN);
 
-
-
-
-  //TimerDelay_Init();
   HAL_Delay(200);   //REVISAR
 
 //empezar el pwm
 
-//HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_1);
+HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_1);
 
 
     HAL_GPIO_WritePin(GPIOC, GPIO_PIN_3, GPIO_PIN_SET);
