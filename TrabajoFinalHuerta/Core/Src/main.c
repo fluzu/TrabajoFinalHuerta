@@ -48,17 +48,16 @@
 extern ADC_HandleTypeDef hadc1;
 extern DMA_HandleTypeDef hdma_adc1;  //INCECESARIO??????
 
-extern I2C_HandleTypeDef hi2c1;
+extern I2C_HandleTypeDef hi2c1;       //INCECESARIO??????
 
 extern RTC_HandleTypeDef hrtc;
 
 extern TIM_HandleTypeDef htim2;
-extern TIM_HandleTypeDef htim3;
-
-/* USER CODE BEGIN PV */
+extern TIM_HandleTypeDef htim3;     //INCECESARIO??????
 
 extern DHT_DataTypeDef DHT22;
-/* USER CODE END PV */
+
+extern uint32_t value_adc[3]; // almacenar datos adc
 
 /* Private function prototypes -----------------------------------------------*/
 
@@ -69,30 +68,11 @@ extern DHT_DataTypeDef DHT22;
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
 
-extern uint32_t value_adc[3]; // almacenar datos adc
 
-void LCD_Temperatura(float temperatura) {
-    LCD_SetCursor(1, 4);
-    LCD_Print("Grados:%0.0fC", temperatura);
-}
 
-void LCD_Humedad(float humedad) {
-    LCD_SetCursor(2, 1);
-    LCD_Print("HA:%0.0f%%", humedad);
-}
 
-uint32_t Get_percentageHS(uint32_t value){
-    int hummin = 4095;                      //REVISAR TIPO DE DATO
-    int hummax = 2300;                      //REVISAR MÃ?NIMO
-//#define humminp = 0
-    int hummaxp = 100;
-    if (value > hummin)
-        value = hummin;
-    if (value <= hummax)
-        value = hummax + 1;
-    value = value - hummax;
-    return 100 - ((value * hummaxp) / (hummin - hummax));
-}
+
+
 
 
 //void buzzer_on(void) {                   //RECORDAR QUE ESTA MISMO TIM QUE SERVO(CAMBIAR)
@@ -372,14 +352,14 @@ HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_1);
 ///DHT22
     LCD_Clear();
     DHT_GetData(&DHT22);
-    LCD_Temperatura(DHT22.Temperature);
-    LCD_Humedad(DHT22.Humidity);
+    BSP_LCD_Temperature(DHT22.Temperature);
+    BSP_LCD_Humidity(DHT22.Humidity);
 
 ///Sensor humedad de suelo
     HAL_ADC_Start(&hadc1);
      if(HAL_ADC_PollForConversion(&hadc1, 5) == HAL_OK){     //incilur esta parte en el solenoide para hecr while?
          value_adc[0] = HAL_ADC_GetValue(&hadc1);
-         value_adc[0] = Get_percentageHS(value_adc[0]);
+         value_adc[0] = BSP_Get_percentageHS(value_adc[0]);
          HAL_ADC_Stop(&hadc1);
      }
       LCD_SetCursor(2, 10);
@@ -423,7 +403,7 @@ HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_1);
           HAL_ADC_Start(&hadc1);
           if(HAL_ADC_PollForConversion(&hadc1, 5) == HAL_OK){
               value_adc[0] = HAL_ADC_GetValue(&hadc1);
-              value_adc[0] = Get_percentageHS(value_adc[0]);
+              value_adc[0] = BSP_Get_percentageHS(value_adc[0]);
               HAL_ADC_Stop(&hadc1);
           }
           if (value_adc[0] < rangohmax && value_adc[0] > rangohmin) {//revisar hacer con while

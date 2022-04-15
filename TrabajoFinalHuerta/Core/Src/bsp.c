@@ -46,9 +46,28 @@ void BSP_Init() {
 
 }
 
-/// realizar bsp init de los tim pasar desde el main
+void BSP_LCD_Temperature(float temperatura) {
+    LCD_SetCursor(1, 4);
+    LCD_Print("Grados:%0.0fC", temperatura);
+}
 
+void BSP_LCD_Humidity(float humedad) {
+    LCD_SetCursor(2, 1);
+    LCD_Print("HA:%0.0f%%", humedad);
+}
 
+uint32_t BSP_Get_percentageHS(uint32_t value){
+    int hummin = 4095;                      //REVISAR TIPO DE DATO
+    int hummax = 2300;                      //REVISAR Maximo y Minimo en especial maximo
+//#define humminp = 0
+    int hummaxp = 100;
+    if (value > hummin)
+        value = hummin;
+    if (value <= hummax)
+        value = hummax + 1;
+    value = value - hummax;
+    return 100 - ((value * hummaxp) / (hummin - hummax));
+}
 
 /**
   * @brief System Clock Configuration

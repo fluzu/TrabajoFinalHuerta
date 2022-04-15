@@ -1751,60 +1751,60 @@ LOAD c:/devembedded/tools/gcc-arm-none-eabi-10.3-2021.10-win32/gcc-arm-none-eabi
                 0x080019a4       0x80 CMakeFiles/TestLCDi2c.elf.dir/Core/Src/bsp.c.obj
  .text.MX_RTC_Init
                 0x08001a24       0xb4 CMakeFiles/TestLCDi2c.elf.dir/Core/Src/bsp.c.obj
+ .text.BSP_LCD_Temperature
+                0x08001ad8       0x1c CMakeFiles/TestLCDi2c.elf.dir/Core/Src/bsp.c.obj
+                0x08001ad8                BSP_LCD_Temperature
+ .text.BSP_LCD_Humidity
+                0x08001af4       0x1c CMakeFiles/TestLCDi2c.elf.dir/Core/Src/bsp.c.obj
+                0x08001af4                BSP_LCD_Humidity
+ .text.BSP_Get_percentageHS
+                0x08001b10       0x3c CMakeFiles/TestLCDi2c.elf.dir/Core/Src/bsp.c.obj
+                0x08001b10                BSP_Get_percentageHS
  .text.SystemClock_Config
-                0x08001ad8       0xb4 CMakeFiles/TestLCDi2c.elf.dir/Core/Src/bsp.c.obj
-                0x08001ad8                SystemClock_Config
+                0x08001b4c       0xb4 CMakeFiles/TestLCDi2c.elf.dir/Core/Src/bsp.c.obj
+                0x08001b4c                SystemClock_Config
  .text.BSP_Init
-                0x08001b8c       0x34 CMakeFiles/TestLCDi2c.elf.dir/Core/Src/bsp.c.obj
-                0x08001b8c                BSP_Init
+                0x08001c00       0x34 CMakeFiles/TestLCDi2c.elf.dir/Core/Src/bsp.c.obj
+                0x08001c00                BSP_Init
  .text.Error_Handler
-                0x08001bc0        0x2 CMakeFiles/TestLCDi2c.elf.dir/Core/Src/bsp.c.obj
-                0x08001bc0                Error_Handler
- *fill*         0x08001bc2        0x2 
+                0x08001c34        0x2 CMakeFiles/TestLCDi2c.elf.dir/Core/Src/bsp.c.obj
+                0x08001c34                Error_Handler
+ *fill*         0x08001c36        0x2 
  .text.keypad_init
-                0x08001bc4      0x10c CMakeFiles/TestLCDi2c.elf.dir/Core/Src/keypad.c.obj
-                0x08001bc4                keypad_init
+                0x08001c38      0x10c CMakeFiles/TestLCDi2c.elf.dir/Core/Src/keypad.c.obj
+                0x08001c38                keypad_init
  .text.keypad_read
-                0x08001cd0      0x234 CMakeFiles/TestLCDi2c.elf.dir/Core/Src/keypad.c.obj
-                0x08001cd0                keypad_read
+                0x08001d44      0x234 CMakeFiles/TestLCDi2c.elf.dir/Core/Src/keypad.c.obj
+                0x08001d44                keypad_read
  .text.hi2cx_define
-                0x08001f04       0x18 CMakeFiles/TestLCDi2c.elf.dir/Core/Src/lcd_i2cModule.c.obj
+                0x08001f78       0x18 CMakeFiles/TestLCDi2c.elf.dir/Core/Src/lcd_i2cModule.c.obj
  .text.LCD_i2cDeviceCheck
-                0x08001f1c       0x2c CMakeFiles/TestLCDi2c.elf.dir/Core/Src/lcd_i2cModule.c.obj
-                0x08001f1c                LCD_i2cDeviceCheck
+                0x08001f90       0x2c CMakeFiles/TestLCDi2c.elf.dir/Core/Src/lcd_i2cModule.c.obj
+                0x08001f90                LCD_i2cDeviceCheck
  .text.LCD_Set_Command
-                0x08001f48       0x64 CMakeFiles/TestLCDi2c.elf.dir/Core/Src/lcd_i2cModule.c.obj
-                0x08001f48                LCD_Set_Command
+                0x08001fbc       0x64 CMakeFiles/TestLCDi2c.elf.dir/Core/Src/lcd_i2cModule.c.obj
+                0x08001fbc                LCD_Set_Command
  .text.LCD_Write_Data
-                0x08001fac       0x6c CMakeFiles/TestLCDi2c.elf.dir/Core/Src/lcd_i2cModule.c.obj
-                0x08001fac                LCD_Write_Data
+                0x08002020       0x6c CMakeFiles/TestLCDi2c.elf.dir/Core/Src/lcd_i2cModule.c.obj
+                0x08002020                LCD_Write_Data
  .text.LCD_Clear
-                0x08002018       0x24 CMakeFiles/TestLCDi2c.elf.dir/Core/Src/lcd_i2cModule.c.obj
-                0x08002018                LCD_Clear
+                0x0800208c       0x24 CMakeFiles/TestLCDi2c.elf.dir/Core/Src/lcd_i2cModule.c.obj
+                0x0800208c                LCD_Clear
  .text.LCD_SetCursor
-                0x0800203c       0x34 CMakeFiles/TestLCDi2c.elf.dir/Core/Src/lcd_i2cModule.c.obj
-                0x0800203c                LCD_SetCursor
+                0x080020b0       0x34 CMakeFiles/TestLCDi2c.elf.dir/Core/Src/lcd_i2cModule.c.obj
+                0x080020b0                LCD_SetCursor
  .text.LCD_Send_String
-                0x08002070       0xdc CMakeFiles/TestLCDi2c.elf.dir/Core/Src/lcd_i2cModule.c.obj
-                0x08002070                LCD_Send_String
+                0x080020e4       0xdc CMakeFiles/TestLCDi2c.elf.dir/Core/Src/lcd_i2cModule.c.obj
+                0x080020e4                LCD_Send_String
  .text.LCD_Print
-                0x0800214c       0x24 CMakeFiles/TestLCDi2c.elf.dir/Core/Src/lcd_i2cModule.c.obj
-                0x0800214c                LCD_Print
+                0x080021c0       0x24 CMakeFiles/TestLCDi2c.elf.dir/Core/Src/lcd_i2cModule.c.obj
+                0x080021c0                LCD_Print
  .text.LCD_BackLight
-                0x08002170       0x2c CMakeFiles/TestLCDi2c.elf.dir/Core/Src/lcd_i2cModule.c.obj
-                0x08002170                LCD_BackLight
+                0x080021e4       0x2c CMakeFiles/TestLCDi2c.elf.dir/Core/Src/lcd_i2cModule.c.obj
+                0x080021e4                LCD_BackLight
  .text.LCD_Init
-                0x0800219c       0x44 CMakeFiles/TestLCDi2c.elf.dir/Core/Src/lcd_i2cModule.c.obj
-                0x0800219c                LCD_Init
- .text.LCD_Temperatura
-                0x080021e0       0x1c CMakeFiles/TestLCDi2c.elf.dir/Core/Src/main.c.obj
-                0x080021e0                LCD_Temperatura
- .text.LCD_Humedad
-                0x080021fc       0x1c CMakeFiles/TestLCDi2c.elf.dir/Core/Src/main.c.obj
-                0x080021fc                LCD_Humedad
- .text.Get_percentageHS
-                0x08002218       0x3c CMakeFiles/TestLCDi2c.elf.dir/Core/Src/main.c.obj
-                0x08002218                Get_percentageHS
+                0x08002210       0x44 CMakeFiles/TestLCDi2c.elf.dir/Core/Src/lcd_i2cModule.c.obj
+                0x08002210                LCD_Init
  .text.main     0x08002254      0x6d4 CMakeFiles/TestLCDi2c.elf.dir/Core/Src/main.c.obj
                 0x08002254                main
  .text.HAL_MspInit
@@ -2410,14 +2410,14 @@ LOAD c:/devembedded/tools/gcc-arm-none-eabi-10.3-2021.10-win32/gcc-arm-none-eabi
  *(.rodata)
  .rodata        0x0800b4b0       0x10 CMakeFiles/TestLCDi2c.elf.dir/Core/Src/keypad.c.obj
  *(.rodata*)
+ .rodata.BSP_LCD_Temperature.str1.4
+                0x0800b4c0        0xe CMakeFiles/TestLCDi2c.elf.dir/Core/Src/bsp.c.obj
+ *fill*         0x0800b4ce        0x2 
+ .rodata.BSP_LCD_Humidity.str1.4
+                0x0800b4d0        0xb CMakeFiles/TestLCDi2c.elf.dir/Core/Src/bsp.c.obj
+ *fill*         0x0800b4db        0x1 
  .rodata.Cursor_Data
-                0x0800b4c0       0x20 CMakeFiles/TestLCDi2c.elf.dir/Core/Src/lcd_i2cModule.c.obj
- .rodata.LCD_Temperatura.str1.4
-                0x0800b4e0        0xe CMakeFiles/TestLCDi2c.elf.dir/Core/Src/main.c.obj
- *fill*         0x0800b4ee        0x2 
- .rodata.LCD_Humedad.str1.4
-                0x0800b4f0        0xb CMakeFiles/TestLCDi2c.elf.dir/Core/Src/main.c.obj
- *fill*         0x0800b4fb        0x1 
+                0x0800b4dc       0x20 CMakeFiles/TestLCDi2c.elf.dir/Core/Src/lcd_i2cModule.c.obj
  .rodata.main.str1.4
                 0x0800b4fc      0x10b CMakeFiles/TestLCDi2c.elf.dir/Core/Src/main.c.obj
  *fill*         0x0800b607        0x1 
@@ -2878,65 +2878,66 @@ LOAD c:/devembedded/tools/gcc-arm-none-eabi-10.3-2021.10-win32/gcc-arm-none-eabi
 LOAD c:/devembedded/tools/gcc-arm-none-eabi-10.3-2021.10-win32/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libm.a
 LOAD c:/devembedded/tools/gcc-arm-none-eabi-10.3-2021.10-win32/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp\libgcc.a
 
-.debug_info     0x00000000    0x18f3f
+.debug_info     0x00000000    0x18f7b
  .debug_info    0x00000000      0x692 CMakeFiles/TestLCDi2c.elf.dir/Core/Src/DHT.c.obj
  .debug_info    0x00000692      0x7e1 CMakeFiles/TestLCDi2c.elf.dir/Core/Src/Timer_Delay.c.obj
- .debug_info    0x00000e73     0x2030 CMakeFiles/TestLCDi2c.elf.dir/Core/Src/bsp.c.obj
- .debug_info    0x00002ea3      0xa18 CMakeFiles/TestLCDi2c.elf.dir/Core/Src/keypad.c.obj
- .debug_info    0x000038bb      0xcb9 CMakeFiles/TestLCDi2c.elf.dir/Core/Src/lcd_i2cModule.c.obj
- .debug_info    0x00004574     0x1700 CMakeFiles/TestLCDi2c.elf.dir/Core/Src/main.c.obj
- .debug_info    0x00005c74     0x17d7 CMakeFiles/TestLCDi2c.elf.dir/Core/Src/stm32f4xx_hal_msp.c.obj
- .debug_info    0x0000744b      0xce1 CMakeFiles/TestLCDi2c.elf.dir/Core/Src/stm32f4xx_it.c.obj
- .debug_info    0x0000812c      0x7bb CMakeFiles/TestLCDi2c.elf.dir/Core/Src/syscalls.c.obj
- .debug_info    0x000088e7      0x174 CMakeFiles/TestLCDi2c.elf.dir/Core/Src/sysmem.c.obj
- .debug_info    0x00008a5b      0x564 CMakeFiles/TestLCDi2c.elf.dir/Core/Src/system_stm32f4xx.c.obj
- .debug_info    0x00008fbf       0x22 CMakeFiles/TestLCDi2c.elf.dir/Core/Startup/startup_stm32f411vetx.s.obj
- .debug_info    0x00008fe1      0x982 CMakeFiles/TestLCDi2c.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj
- .debug_info    0x00009963      0xeaf CMakeFiles/TestLCDi2c.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc.c.obj
- .debug_info    0x0000a812      0xca2 CMakeFiles/TestLCDi2c.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c.obj
- .debug_info    0x0000b4b4     0x1008 CMakeFiles/TestLCDi2c.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj
- .debug_info    0x0000c4bc      0xb37 CMakeFiles/TestLCDi2c.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj
- .debug_info    0x0000cff3      0x7bf CMakeFiles/TestLCDi2c.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj
- .debug_info    0x0000d7b2     0x3851 CMakeFiles/TestLCDi2c.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c.c.obj
- .debug_info    0x00011003      0xb2b CMakeFiles/TestLCDi2c.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj
- .debug_info    0x00011b2e      0x6f3 CMakeFiles/TestLCDi2c.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c.obj
- .debug_info    0x00012221      0xf39 CMakeFiles/TestLCDi2c.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rtc.c.obj
- .debug_info    0x0001315a     0x1211 CMakeFiles/TestLCDi2c.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rtc_ex.c.obj
- .debug_info    0x0001436b     0x35d1 CMakeFiles/TestLCDi2c.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj
- .debug_info    0x0001793c     0x1603 CMakeFiles/TestLCDi2c.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c.obj
+ .debug_info    0x00000e73     0x215a CMakeFiles/TestLCDi2c.elf.dir/Core/Src/bsp.c.obj
+ .debug_info    0x00002fcd      0xa18 CMakeFiles/TestLCDi2c.elf.dir/Core/Src/keypad.c.obj
+ .debug_info    0x000039e5      0xcb9 CMakeFiles/TestLCDi2c.elf.dir/Core/Src/lcd_i2cModule.c.obj
+ .debug_info    0x0000469e     0x1612 CMakeFiles/TestLCDi2c.elf.dir/Core/Src/main.c.obj
+ .debug_info    0x00005cb0     0x17d7 CMakeFiles/TestLCDi2c.elf.dir/Core/Src/stm32f4xx_hal_msp.c.obj
+ .debug_info    0x00007487      0xce1 CMakeFiles/TestLCDi2c.elf.dir/Core/Src/stm32f4xx_it.c.obj
+ .debug_info    0x00008168      0x7bb CMakeFiles/TestLCDi2c.elf.dir/Core/Src/syscalls.c.obj
+ .debug_info    0x00008923      0x174 CMakeFiles/TestLCDi2c.elf.dir/Core/Src/sysmem.c.obj
+ .debug_info    0x00008a97      0x564 CMakeFiles/TestLCDi2c.elf.dir/Core/Src/system_stm32f4xx.c.obj
+ .debug_info    0x00008ffb       0x22 CMakeFiles/TestLCDi2c.elf.dir/Core/Startup/startup_stm32f411vetx.s.obj
+ .debug_info    0x0000901d      0x982 CMakeFiles/TestLCDi2c.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj
+ .debug_info    0x0000999f      0xeaf CMakeFiles/TestLCDi2c.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc.c.obj
+ .debug_info    0x0000a84e      0xca2 CMakeFiles/TestLCDi2c.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c.obj
+ .debug_info    0x0000b4f0     0x1008 CMakeFiles/TestLCDi2c.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj
+ .debug_info    0x0000c4f8      0xb37 CMakeFiles/TestLCDi2c.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj
+ .debug_info    0x0000d02f      0x7bf CMakeFiles/TestLCDi2c.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj
+ .debug_info    0x0000d7ee     0x3851 CMakeFiles/TestLCDi2c.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c.c.obj
+ .debug_info    0x0001103f      0xb2b CMakeFiles/TestLCDi2c.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj
+ .debug_info    0x00011b6a      0x6f3 CMakeFiles/TestLCDi2c.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c.obj
+ .debug_info    0x0001225d      0xf39 CMakeFiles/TestLCDi2c.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rtc.c.obj
+ .debug_info    0x00013196     0x1211 CMakeFiles/TestLCDi2c.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rtc_ex.c.obj
+ .debug_info    0x000143a7     0x35d1 CMakeFiles/TestLCDi2c.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj
+ .debug_info    0x00017978     0x1603 CMakeFiles/TestLCDi2c.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c.obj
 
-.debug_abbrev   0x00000000     0x3178
+.debug_abbrev   0x00000000     0x318b
  .debug_abbrev  0x00000000      0x20e CMakeFiles/TestLCDi2c.elf.dir/Core/Src/DHT.c.obj
  .debug_abbrev  0x0000020e      0x1ab CMakeFiles/TestLCDi2c.elf.dir/Core/Src/Timer_Delay.c.obj
- .debug_abbrev  0x000003b9      0x23c CMakeFiles/TestLCDi2c.elf.dir/Core/Src/bsp.c.obj
- .debug_abbrev  0x000005f5      0x194 CMakeFiles/TestLCDi2c.elf.dir/Core/Src/keypad.c.obj
- .debug_abbrev  0x00000789      0x292 CMakeFiles/TestLCDi2c.elf.dir/Core/Src/lcd_i2cModule.c.obj
- .debug_abbrev  0x00000a1b      0x21c CMakeFiles/TestLCDi2c.elf.dir/Core/Src/main.c.obj
- .debug_abbrev  0x00000c37      0x221 CMakeFiles/TestLCDi2c.elf.dir/Core/Src/stm32f4xx_hal_msp.c.obj
- .debug_abbrev  0x00000e58      0x19d CMakeFiles/TestLCDi2c.elf.dir/Core/Src/stm32f4xx_it.c.obj
- .debug_abbrev  0x00000ff5      0x1b4 CMakeFiles/TestLCDi2c.elf.dir/Core/Src/syscalls.c.obj
- .debug_abbrev  0x000011a9       0xe7 CMakeFiles/TestLCDi2c.elf.dir/Core/Src/sysmem.c.obj
- .debug_abbrev  0x00001290      0x119 CMakeFiles/TestLCDi2c.elf.dir/Core/Src/system_stm32f4xx.c.obj
- .debug_abbrev  0x000013a9       0x12 CMakeFiles/TestLCDi2c.elf.dir/Core/Startup/startup_stm32f411vetx.s.obj
- .debug_abbrev  0x000013bb      0x237 CMakeFiles/TestLCDi2c.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj
- .debug_abbrev  0x000015f2      0x1fa CMakeFiles/TestLCDi2c.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc.c.obj
- .debug_abbrev  0x000017ec      0x253 CMakeFiles/TestLCDi2c.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c.obj
- .debug_abbrev  0x00001a3f      0x36a CMakeFiles/TestLCDi2c.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj
- .debug_abbrev  0x00001da9      0x282 CMakeFiles/TestLCDi2c.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj
- .debug_abbrev  0x0000202b      0x1ef CMakeFiles/TestLCDi2c.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj
- .debug_abbrev  0x0000221a      0x290 CMakeFiles/TestLCDi2c.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c.c.obj
- .debug_abbrev  0x000024aa      0x28a CMakeFiles/TestLCDi2c.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj
- .debug_abbrev  0x00002734      0x180 CMakeFiles/TestLCDi2c.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c.obj
- .debug_abbrev  0x000028b4      0x211 CMakeFiles/TestLCDi2c.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rtc.c.obj
- .debug_abbrev  0x00002ac5      0x225 CMakeFiles/TestLCDi2c.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rtc_ex.c.obj
- .debug_abbrev  0x00002cea      0x23c CMakeFiles/TestLCDi2c.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj
- .debug_abbrev  0x00002f26      0x252 CMakeFiles/TestLCDi2c.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c.obj
+ .debug_abbrev  0x000003b9      0x290 CMakeFiles/TestLCDi2c.elf.dir/Core/Src/bsp.c.obj
+ .debug_abbrev  0x00000649      0x194 CMakeFiles/TestLCDi2c.elf.dir/Core/Src/keypad.c.obj
+ .debug_abbrev  0x000007dd      0x292 CMakeFiles/TestLCDi2c.elf.dir/Core/Src/lcd_i2cModule.c.obj
+ .debug_abbrev  0x00000a6f      0x1db CMakeFiles/TestLCDi2c.elf.dir/Core/Src/main.c.obj
+ .debug_abbrev  0x00000c4a      0x221 CMakeFiles/TestLCDi2c.elf.dir/Core/Src/stm32f4xx_hal_msp.c.obj
+ .debug_abbrev  0x00000e6b      0x19d CMakeFiles/TestLCDi2c.elf.dir/Core/Src/stm32f4xx_it.c.obj
+ .debug_abbrev  0x00001008      0x1b4 CMakeFiles/TestLCDi2c.elf.dir/Core/Src/syscalls.c.obj
+ .debug_abbrev  0x000011bc       0xe7 CMakeFiles/TestLCDi2c.elf.dir/Core/Src/sysmem.c.obj
+ .debug_abbrev  0x000012a3      0x119 CMakeFiles/TestLCDi2c.elf.dir/Core/Src/system_stm32f4xx.c.obj
+ .debug_abbrev  0x000013bc       0x12 CMakeFiles/TestLCDi2c.elf.dir/Core/Startup/startup_stm32f411vetx.s.obj
+ .debug_abbrev  0x000013ce      0x237 CMakeFiles/TestLCDi2c.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj
+ .debug_abbrev  0x00001605      0x1fa CMakeFiles/TestLCDi2c.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc.c.obj
+ .debug_abbrev  0x000017ff      0x253 CMakeFiles/TestLCDi2c.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c.obj
+ .debug_abbrev  0x00001a52      0x36a CMakeFiles/TestLCDi2c.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj
+ .debug_abbrev  0x00001dbc      0x282 CMakeFiles/TestLCDi2c.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj
+ .debug_abbrev  0x0000203e      0x1ef CMakeFiles/TestLCDi2c.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj
+ .debug_abbrev  0x0000222d      0x290 CMakeFiles/TestLCDi2c.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c.c.obj
+ .debug_abbrev  0x000024bd      0x28a CMakeFiles/TestLCDi2c.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj
+ .debug_abbrev  0x00002747      0x180 CMakeFiles/TestLCDi2c.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c.obj
+ .debug_abbrev  0x000028c7      0x211 CMakeFiles/TestLCDi2c.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rtc.c.obj
+ .debug_abbrev  0x00002ad8      0x225 CMakeFiles/TestLCDi2c.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rtc_ex.c.obj
+ .debug_abbrev  0x00002cfd      0x23c CMakeFiles/TestLCDi2c.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj
+ .debug_abbrev  0x00002f39      0x252 CMakeFiles/TestLCDi2c.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c.obj
 
 .debug_loc      0x00000000     0xf0db
  .debug_loc     0x00000000      0x188 CMakeFiles/TestLCDi2c.elf.dir/Core/Src/DHT.c.obj
- .debug_loc     0x00000188       0x46 CMakeFiles/TestLCDi2c.elf.dir/Core/Src/keypad.c.obj
- .debug_loc     0x000001ce      0x275 CMakeFiles/TestLCDi2c.elf.dir/Core/Src/lcd_i2cModule.c.obj
- .debug_loc     0x00000443      0x4b0 CMakeFiles/TestLCDi2c.elf.dir/Core/Src/main.c.obj
+ .debug_loc     0x00000188       0x9a CMakeFiles/TestLCDi2c.elf.dir/Core/Src/bsp.c.obj
+ .debug_loc     0x00000222       0x46 CMakeFiles/TestLCDi2c.elf.dir/Core/Src/keypad.c.obj
+ .debug_loc     0x00000268      0x275 CMakeFiles/TestLCDi2c.elf.dir/Core/Src/lcd_i2cModule.c.obj
+ .debug_loc     0x000004dd      0x416 CMakeFiles/TestLCDi2c.elf.dir/Core/Src/main.c.obj
  .debug_loc     0x000008f3      0x23c CMakeFiles/TestLCDi2c.elf.dir/Core/Src/stm32f4xx_hal_msp.c.obj
  .debug_loc     0x00000b2f      0x3c5 CMakeFiles/TestLCDi2c.elf.dir/Core/Src/syscalls.c.obj
  .debug_loc     0x00000ef4       0x64 CMakeFiles/TestLCDi2c.elf.dir/Core/Src/sysmem.c.obj
@@ -2961,13 +2962,13 @@ LOAD c:/devembedded/tools/gcc-arm-none-eabi-10.3-2021.10-win32/gcc-arm-none-eabi
  .debug_aranges
                 0x00000048       0x30 CMakeFiles/TestLCDi2c.elf.dir/Core/Src/Timer_Delay.c.obj
  .debug_aranges
-                0x00000078       0x68 CMakeFiles/TestLCDi2c.elf.dir/Core/Src/bsp.c.obj
+                0x00000078       0x80 CMakeFiles/TestLCDi2c.elf.dir/Core/Src/bsp.c.obj
  .debug_aranges
-                0x000000e0       0x28 CMakeFiles/TestLCDi2c.elf.dir/Core/Src/keypad.c.obj
+                0x000000f8       0x28 CMakeFiles/TestLCDi2c.elf.dir/Core/Src/keypad.c.obj
  .debug_aranges
-                0x00000108       0x68 CMakeFiles/TestLCDi2c.elf.dir/Core/Src/lcd_i2cModule.c.obj
+                0x00000120       0x68 CMakeFiles/TestLCDi2c.elf.dir/Core/Src/lcd_i2cModule.c.obj
  .debug_aranges
-                0x00000170       0x38 CMakeFiles/TestLCDi2c.elf.dir/Core/Src/main.c.obj
+                0x00000188       0x20 CMakeFiles/TestLCDi2c.elf.dir/Core/Src/main.c.obj
  .debug_aranges
                 0x000001a8       0x68 CMakeFiles/TestLCDi2c.elf.dir/Core/Src/stm32f4xx_hal_msp.c.obj
  .debug_aranges
@@ -3010,10 +3011,10 @@ LOAD c:/devembedded/tools/gcc-arm-none-eabi-10.3-2021.10-win32/gcc-arm-none-eabi
 .debug_ranges   0x00000000     0x1110
  .debug_ranges  0x00000000       0x38 CMakeFiles/TestLCDi2c.elf.dir/Core/Src/DHT.c.obj
  .debug_ranges  0x00000038       0x20 CMakeFiles/TestLCDi2c.elf.dir/Core/Src/Timer_Delay.c.obj
- .debug_ranges  0x00000058       0x58 CMakeFiles/TestLCDi2c.elf.dir/Core/Src/bsp.c.obj
- .debug_ranges  0x000000b0       0x18 CMakeFiles/TestLCDi2c.elf.dir/Core/Src/keypad.c.obj
- .debug_ranges  0x000000c8       0x70 CMakeFiles/TestLCDi2c.elf.dir/Core/Src/lcd_i2cModule.c.obj
- .debug_ranges  0x00000138       0x28 CMakeFiles/TestLCDi2c.elf.dir/Core/Src/main.c.obj
+ .debug_ranges  0x00000058       0x70 CMakeFiles/TestLCDi2c.elf.dir/Core/Src/bsp.c.obj
+ .debug_ranges  0x000000c8       0x18 CMakeFiles/TestLCDi2c.elf.dir/Core/Src/keypad.c.obj
+ .debug_ranges  0x000000e0       0x70 CMakeFiles/TestLCDi2c.elf.dir/Core/Src/lcd_i2cModule.c.obj
+ .debug_ranges  0x00000150       0x10 CMakeFiles/TestLCDi2c.elf.dir/Core/Src/main.c.obj
  .debug_ranges  0x00000160       0x58 CMakeFiles/TestLCDi2c.elf.dir/Core/Src/stm32f4xx_hal_msp.c.obj
  .debug_ranges  0x000001b8       0x70 CMakeFiles/TestLCDi2c.elf.dir/Core/Src/stm32f4xx_it.c.obj
  .debug_ranges  0x00000228       0x98 CMakeFiles/TestLCDi2c.elf.dir/Core/Src/syscalls.c.obj
@@ -3034,83 +3035,83 @@ LOAD c:/devembedded/tools/gcc-arm-none-eabi-10.3-2021.10-win32/gcc-arm-none-eabi
  .debug_ranges  0x00000c38      0x398 CMakeFiles/TestLCDi2c.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj
  .debug_ranges  0x00000fd0      0x140 CMakeFiles/TestLCDi2c.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c.obj
 
-.debug_line     0x00000000    0x1569c
+.debug_line     0x00000000    0x1569a
  .debug_line    0x00000000      0x4f3 CMakeFiles/TestLCDi2c.elf.dir/Core/Src/DHT.c.obj
  .debug_line    0x000004f3      0x415 CMakeFiles/TestLCDi2c.elf.dir/Core/Src/Timer_Delay.c.obj
- .debug_line    0x00000908      0x9d0 CMakeFiles/TestLCDi2c.elf.dir/Core/Src/bsp.c.obj
- .debug_line    0x000012d8      0x5d5 CMakeFiles/TestLCDi2c.elf.dir/Core/Src/keypad.c.obj
- .debug_line    0x000018ad      0x6f9 CMakeFiles/TestLCDi2c.elf.dir/Core/Src/lcd_i2cModule.c.obj
- .debug_line    0x00001fa6      0x78b CMakeFiles/TestLCDi2c.elf.dir/Core/Src/main.c.obj
- .debug_line    0x00002731      0x63d CMakeFiles/TestLCDi2c.elf.dir/Core/Src/stm32f4xx_hal_msp.c.obj
- .debug_line    0x00002d6e      0x434 CMakeFiles/TestLCDi2c.elf.dir/Core/Src/stm32f4xx_it.c.obj
- .debug_line    0x000031a2      0x485 CMakeFiles/TestLCDi2c.elf.dir/Core/Src/syscalls.c.obj
- .debug_line    0x00003627      0x280 CMakeFiles/TestLCDi2c.elf.dir/Core/Src/sysmem.c.obj
- .debug_line    0x000038a7      0x34b CMakeFiles/TestLCDi2c.elf.dir/Core/Src/system_stm32f4xx.c.obj
- .debug_line    0x00003bf2       0xce CMakeFiles/TestLCDi2c.elf.dir/Core/Startup/startup_stm32f411vetx.s.obj
- .debug_line    0x00003cc0      0x686 CMakeFiles/TestLCDi2c.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj
- .debug_line    0x00004346     0x10a5 CMakeFiles/TestLCDi2c.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc.c.obj
- .debug_line    0x000053eb      0xd27 CMakeFiles/TestLCDi2c.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c.obj
- .debug_line    0x00006112      0x899 CMakeFiles/TestLCDi2c.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj
- .debug_line    0x000069ab      0xeed CMakeFiles/TestLCDi2c.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj
- .debug_line    0x00007898      0x7ad CMakeFiles/TestLCDi2c.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj
- .debug_line    0x00008045     0x50aa CMakeFiles/TestLCDi2c.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c.c.obj
- .debug_line    0x0000d0ef      0xc01 CMakeFiles/TestLCDi2c.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj
- .debug_line    0x0000dcf0      0x740 CMakeFiles/TestLCDi2c.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c.obj
- .debug_line    0x0000e430     0x10f1 CMakeFiles/TestLCDi2c.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rtc.c.obj
- .debug_line    0x0000f521     0x17e5 CMakeFiles/TestLCDi2c.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rtc_ex.c.obj
- .debug_line    0x00010d06     0x370f CMakeFiles/TestLCDi2c.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj
- .debug_line    0x00014415     0x1287 CMakeFiles/TestLCDi2c.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c.obj
+ .debug_line    0x00000908      0xa4f CMakeFiles/TestLCDi2c.elf.dir/Core/Src/bsp.c.obj
+ .debug_line    0x00001357      0x5d5 CMakeFiles/TestLCDi2c.elf.dir/Core/Src/keypad.c.obj
+ .debug_line    0x0000192c      0x6f9 CMakeFiles/TestLCDi2c.elf.dir/Core/Src/lcd_i2cModule.c.obj
+ .debug_line    0x00002025      0x70a CMakeFiles/TestLCDi2c.elf.dir/Core/Src/main.c.obj
+ .debug_line    0x0000272f      0x63d CMakeFiles/TestLCDi2c.elf.dir/Core/Src/stm32f4xx_hal_msp.c.obj
+ .debug_line    0x00002d6c      0x434 CMakeFiles/TestLCDi2c.elf.dir/Core/Src/stm32f4xx_it.c.obj
+ .debug_line    0x000031a0      0x485 CMakeFiles/TestLCDi2c.elf.dir/Core/Src/syscalls.c.obj
+ .debug_line    0x00003625      0x280 CMakeFiles/TestLCDi2c.elf.dir/Core/Src/sysmem.c.obj
+ .debug_line    0x000038a5      0x34b CMakeFiles/TestLCDi2c.elf.dir/Core/Src/system_stm32f4xx.c.obj
+ .debug_line    0x00003bf0       0xce CMakeFiles/TestLCDi2c.elf.dir/Core/Startup/startup_stm32f411vetx.s.obj
+ .debug_line    0x00003cbe      0x686 CMakeFiles/TestLCDi2c.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj
+ .debug_line    0x00004344     0x10a5 CMakeFiles/TestLCDi2c.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc.c.obj
+ .debug_line    0x000053e9      0xd27 CMakeFiles/TestLCDi2c.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c.obj
+ .debug_line    0x00006110      0x899 CMakeFiles/TestLCDi2c.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj
+ .debug_line    0x000069a9      0xeed CMakeFiles/TestLCDi2c.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj
+ .debug_line    0x00007896      0x7ad CMakeFiles/TestLCDi2c.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj
+ .debug_line    0x00008043     0x50aa CMakeFiles/TestLCDi2c.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c.c.obj
+ .debug_line    0x0000d0ed      0xc01 CMakeFiles/TestLCDi2c.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj
+ .debug_line    0x0000dcee      0x740 CMakeFiles/TestLCDi2c.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c.obj
+ .debug_line    0x0000e42e     0x10f1 CMakeFiles/TestLCDi2c.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rtc.c.obj
+ .debug_line    0x0000f51f     0x17e5 CMakeFiles/TestLCDi2c.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rtc_ex.c.obj
+ .debug_line    0x00010d04     0x370f CMakeFiles/TestLCDi2c.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj
+ .debug_line    0x00014413     0x1287 CMakeFiles/TestLCDi2c.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c.obj
 
-.debug_str      0x00000000     0x5c56
- .debug_str     0x00000000      0x391 CMakeFiles/TestLCDi2c.elf.dir/Core/Src/DHT.c.obj
+.debug_str      0x00000000     0x5c4e
+ .debug_str     0x00000000      0x37c CMakeFiles/TestLCDi2c.elf.dir/Core/Src/DHT.c.obj
                                 0x3f3 (size before relaxing)
- .debug_str     0x00000391      0x5b8 CMakeFiles/TestLCDi2c.elf.dir/Core/Src/Timer_Delay.c.obj
+ .debug_str     0x0000037c      0x5b8 CMakeFiles/TestLCDi2c.elf.dir/Core/Src/Timer_Delay.c.obj
                                 0x7f6 (size before relaxing)
- .debug_str     0x00000949      0xfab CMakeFiles/TestLCDi2c.elf.dir/Core/Src/bsp.c.obj
-                               0x1842 (size before relaxing)
- .debug_str     0x000018f4       0x81 CMakeFiles/TestLCDi2c.elf.dir/Core/Src/keypad.c.obj
+ .debug_str     0x00000934     0x1027 CMakeFiles/TestLCDi2c.elf.dir/Core/Src/bsp.c.obj
+                               0x18c4 (size before relaxing)
+ .debug_str     0x0000195b       0x81 CMakeFiles/TestLCDi2c.elf.dir/Core/Src/keypad.c.obj
                                 0x43c (size before relaxing)
- .debug_str     0x00001975      0x25e CMakeFiles/TestLCDi2c.elf.dir/Core/Src/lcd_i2cModule.c.obj
+ .debug_str     0x000019dc      0x246 CMakeFiles/TestLCDi2c.elf.dir/Core/Src/lcd_i2cModule.c.obj
                                 0x98b (size before relaxing)
- .debug_str     0x00001bd3      0x184 CMakeFiles/TestLCDi2c.elf.dir/Core/Src/main.c.obj
-                                0xa64 (size before relaxing)
- .debug_str     0x00001d57      0x17d CMakeFiles/TestLCDi2c.elf.dir/Core/Src/stm32f4xx_hal_msp.c.obj
+ .debug_str     0x00001c22      0x12d CMakeFiles/TestLCDi2c.elf.dir/Core/Src/main.c.obj
+                                0xa41 (size before relaxing)
+ .debug_str     0x00001d4f      0x17d CMakeFiles/TestLCDi2c.elf.dir/Core/Src/stm32f4xx_hal_msp.c.obj
                                0x1308 (size before relaxing)
- .debug_str     0x00001ed4      0x18e CMakeFiles/TestLCDi2c.elf.dir/Core/Src/stm32f4xx_it.c.obj
+ .debug_str     0x00001ecc      0x18e CMakeFiles/TestLCDi2c.elf.dir/Core/Src/stm32f4xx_it.c.obj
                                 0xaef (size before relaxing)
- .debug_str     0x00002062      0x265 CMakeFiles/TestLCDi2c.elf.dir/Core/Src/syscalls.c.obj
+ .debug_str     0x0000205a      0x265 CMakeFiles/TestLCDi2c.elf.dir/Core/Src/syscalls.c.obj
                                 0x487 (size before relaxing)
- .debug_str     0x000022c7       0xbe CMakeFiles/TestLCDi2c.elf.dir/Core/Src/sysmem.c.obj
+ .debug_str     0x000022bf       0xbe CMakeFiles/TestLCDi2c.elf.dir/Core/Src/sysmem.c.obj
                                 0x2a9 (size before relaxing)
- .debug_str     0x00002385      0x124 CMakeFiles/TestLCDi2c.elf.dir/Core/Src/system_stm32f4xx.c.obj
+ .debug_str     0x0000237d      0x124 CMakeFiles/TestLCDi2c.elf.dir/Core/Src/system_stm32f4xx.c.obj
                                 0x40b (size before relaxing)
- .debug_str     0x000024a9       0x7f CMakeFiles/TestLCDi2c.elf.dir/Core/Startup/startup_stm32f411vetx.s.obj
+ .debug_str     0x000024a1       0x7f CMakeFiles/TestLCDi2c.elf.dir/Core/Startup/startup_stm32f411vetx.s.obj
                                  0xdd (size before relaxing)
- .debug_str     0x00002528      0x36f CMakeFiles/TestLCDi2c.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj
+ .debug_str     0x00002520      0x36f CMakeFiles/TestLCDi2c.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj
                                 0xa98 (size before relaxing)
- .debug_str     0x00002897      0x2ac CMakeFiles/TestLCDi2c.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc.c.obj
+ .debug_str     0x0000288f      0x2ac CMakeFiles/TestLCDi2c.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc.c.obj
                                 0x9d7 (size before relaxing)
- .debug_str     0x00002b43      0x328 CMakeFiles/TestLCDi2c.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c.obj
+ .debug_str     0x00002b3b      0x328 CMakeFiles/TestLCDi2c.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c.obj
                                 0xa3a (size before relaxing)
- .debug_str     0x00002e6b      0x473 CMakeFiles/TestLCDi2c.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj
+ .debug_str     0x00002e63      0x473 CMakeFiles/TestLCDi2c.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj
                                 0xb58 (size before relaxing)
- .debug_str     0x000032de      0x30f CMakeFiles/TestLCDi2c.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj
+ .debug_str     0x000032d6      0x30f CMakeFiles/TestLCDi2c.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj
                                 0x7fa (size before relaxing)
- .debug_str     0x000035ed      0x151 CMakeFiles/TestLCDi2c.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj
+ .debug_str     0x000035e5      0x151 CMakeFiles/TestLCDi2c.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj
                                 0x576 (size before relaxing)
- .debug_str     0x0000373e      0x896 CMakeFiles/TestLCDi2c.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c.c.obj
+ .debug_str     0x00003736      0x896 CMakeFiles/TestLCDi2c.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c.c.obj
                                0x10ae (size before relaxing)
- .debug_str     0x00003fd4      0x1b9 CMakeFiles/TestLCDi2c.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj
+ .debug_str     0x00003fcc      0x1b9 CMakeFiles/TestLCDi2c.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj
                                 0x79c (size before relaxing)
- .debug_str     0x0000418d      0x15a CMakeFiles/TestLCDi2c.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c.obj
+ .debug_str     0x00004185      0x15a CMakeFiles/TestLCDi2c.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c.obj
                                 0x593 (size before relaxing)
- .debug_str     0x000042e7      0x1ba CMakeFiles/TestLCDi2c.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rtc.c.obj
+ .debug_str     0x000042df      0x1ba CMakeFiles/TestLCDi2c.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rtc.c.obj
                                 0x7c9 (size before relaxing)
- .debug_str     0x000044a1      0x59a CMakeFiles/TestLCDi2c.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rtc_ex.c.obj
+ .debug_str     0x00004499      0x59a CMakeFiles/TestLCDi2c.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rtc_ex.c.obj
                                 0xb29 (size before relaxing)
- .debug_str     0x00004a3b      0xcfa CMakeFiles/TestLCDi2c.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj
+ .debug_str     0x00004a33      0xcfa CMakeFiles/TestLCDi2c.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj
                                0x152f (size before relaxing)
- .debug_str     0x00005735      0x521 CMakeFiles/TestLCDi2c.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c.obj
+ .debug_str     0x0000572d      0x521 CMakeFiles/TestLCDi2c.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c.obj
                                 0xd47 (size before relaxing)
 
 .comment        0x00000000       0x49
@@ -3143,10 +3144,10 @@ LOAD c:/devembedded/tools/gcc-arm-none-eabi-10.3-2021.10-win32/gcc-arm-none-eabi
 .debug_frame    0x00000000     0x47a8
  .debug_frame   0x00000000       0xb4 CMakeFiles/TestLCDi2c.elf.dir/Core/Src/DHT.c.obj
  .debug_frame   0x000000b4       0x60 CMakeFiles/TestLCDi2c.elf.dir/Core/Src/Timer_Delay.c.obj
- .debug_frame   0x00000114      0x13c CMakeFiles/TestLCDi2c.elf.dir/Core/Src/bsp.c.obj
- .debug_frame   0x00000250       0x60 CMakeFiles/TestLCDi2c.elf.dir/Core/Src/keypad.c.obj
- .debug_frame   0x000002b0      0x118 CMakeFiles/TestLCDi2c.elf.dir/Core/Src/lcd_i2cModule.c.obj
- .debug_frame   0x000003c8       0x74 CMakeFiles/TestLCDi2c.elf.dir/Core/Src/main.c.obj
+ .debug_frame   0x00000114      0x17c CMakeFiles/TestLCDi2c.elf.dir/Core/Src/bsp.c.obj
+ .debug_frame   0x00000290       0x60 CMakeFiles/TestLCDi2c.elf.dir/Core/Src/keypad.c.obj
+ .debug_frame   0x000002f0      0x118 CMakeFiles/TestLCDi2c.elf.dir/Core/Src/lcd_i2cModule.c.obj
+ .debug_frame   0x00000408       0x34 CMakeFiles/TestLCDi2c.elf.dir/Core/Src/main.c.obj
  .debug_frame   0x0000043c      0x12c CMakeFiles/TestLCDi2c.elf.dir/Core/Src/stm32f4xx_hal_msp.c.obj
  .debug_frame   0x00000568      0x108 CMakeFiles/TestLCDi2c.elf.dir/Core/Src/stm32f4xx_it.c.obj
  .debug_frame   0x00000670      0x190 CMakeFiles/TestLCDi2c.elf.dir/Core/Src/syscalls.c.obj
