@@ -87,6 +87,7 @@ CMakeFiles/TestLCDi2c.elf.dir/Core/Src/bsp.c.obj: ../Core/Inc/Timer_Delay.h
 CMakeFiles/TestLCDi2c.elf.dir/Core/Src/bsp.c.obj: ../Core/Inc/bsp.h
 CMakeFiles/TestLCDi2c.elf.dir/Core/Src/bsp.c.obj: ../Core/Inc/keypad.h
 CMakeFiles/TestLCDi2c.elf.dir/Core/Src/bsp.c.obj: ../Core/Inc/lcd_i2cModule.h
+CMakeFiles/TestLCDi2c.elf.dir/Core/Src/bsp.c.obj: ../Core/Inc/main.h
 CMakeFiles/TestLCDi2c.elf.dir/Core/Src/bsp.c.obj: ../Core/Inc/stm32f4xx_hal_conf.h
 CMakeFiles/TestLCDi2c.elf.dir/Core/Src/bsp.c.obj: ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f411xe.h
 CMakeFiles/TestLCDi2c.elf.dir/Core/Src/bsp.c.obj: ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h

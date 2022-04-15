@@ -6,7 +6,7 @@
 #include "DHT.h"
 #include "keypad.h"
 #include "bsp.h"
-
+#include "main.h"
 
 uint32_t value_adc[3]; // Revisar capaz no anda sensor inicialicacion aca
 
@@ -44,6 +44,42 @@ void BSP_Init() {
     LCD_Init();
     keypad_init();
 
+}
+
+void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim){  //Duda si anda este callback
+    static uint32_t App_1000msTimeout = 1000;
+    static uint32_t App_100msTimeout = 100;
+    static uint32_t App_10msTimeout = 10;
+    static uint32_t App_10sTimeout = 10000;
+
+    if(htim->Instance == TIM3){
+        if(App_100msTimeout){
+            App_100msTimeout--;
+            APP_Timer100ms();
+            //Codigo
+        }
+    }
+    if(App_10msTimeout){
+        App_10msTimeout--;
+        if(App_10msTimeout == 0){
+            App_10msTimeout = 10;
+            APP_Timer10ms();
+        }
+    }
+    if(App_1000msTimeout){
+        App_1000msTimeout--;
+        if(App_1000msTimeout == 0){
+            App_1000msTimeout = 1000;
+            APP_Timer1000ms();
+        }
+    }
+    if(App_10sTimeout){
+        App_10sTimeout--;
+        if(App_10sTimeout == 0){
+            App_10sTimeout = 10000;
+            APP_Timer10s();
+        }
+    }
 }
 
 void BSP_LCD_Temperature(float temperatura) {

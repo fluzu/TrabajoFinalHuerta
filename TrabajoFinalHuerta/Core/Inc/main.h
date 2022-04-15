@@ -47,7 +47,10 @@ extern "C" {
 
 /* Exported macro ------------------------------------------------------------*/
 /* USER CODE BEGIN EM */
-
+void APP_Timer10ms();
+void APP_Timer100ms();
+void APP_Timer1000ms();
+void APP_Timer10s();
 /* USER CODE END EM */
 
 void HAL_TIM_MspPostInit(TIM_HandleTypeDef *htim);

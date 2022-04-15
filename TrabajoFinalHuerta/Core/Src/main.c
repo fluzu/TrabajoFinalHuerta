@@ -392,6 +392,26 @@ HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_1);
 
 }
 
+void APP_Timer10ms(){
+
+}
+
+void APP_Timer100ms(){
+
+}
+
+void APP_Timer1000ms(){
+
+}
+
+void APP_Timer10s(){
+
+}
+
+
+
+
+
 #ifdef  USE_FULL_ASSERT
 /**
   * @brief  Reports the name of the source file and the source line number
