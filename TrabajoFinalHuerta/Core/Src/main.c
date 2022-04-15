@@ -1,4 +1,4 @@
-/* USER CODE BEGIN Header */
+
 /**
   ******************************************************************************
   * @file           : main.c
@@ -17,33 +17,15 @@
   *
   ******************************************************************************
   */
-/* USER CODE END Header */
-/* Includes ------------------------------------------------------------------*/
+
 #include "main.h"
 #include "bsp.h"
-/* Private includes ----------------------------------------------------------*/
-/* USER CODE BEGIN Includes */
+
 #include "lcd_i2cModule.h"
 #include "Timer_Delay.h"
 #include "DHT.h"
 #include "keypad.h"
-/* USER CODE END Includes */
 
-/* Private typedef -----------------------------------------------------------*/
-/* USER CODE BEGIN PTD */
-
-/* USER CODE END PTD */
-
-/* Private define ------------------------------------------------------------*/
-/* USER CODE BEGIN PD */
-/* USER CODE END PD */
-
-/* Private macro -------------------------------------------------------------*/
-/* USER CODE BEGIN PM */
-
-/* USER CODE END PM */
-
-/* Private variables ---------------------------------------------------------*/
 
 extern ADC_HandleTypeDef hadc1;
 extern DMA_HandleTypeDef hdma_adc1;  //INCECESARIO??????
@@ -59,22 +41,6 @@ extern DHT_DataTypeDef DHT22;
 
 extern uint32_t value_adc[3]; // almacenar datos adc
 
-/* Private function prototypes -----------------------------------------------*/
-
-/* USER CODE BEGIN PFP */
-
-/* USER CODE END PFP */
-
-/* Private user code ---------------------------------------------------------*/
-/* USER CODE BEGIN 0 */
-
-
-
-
-
-
-
-
 //void buzzer_on(void) {                   //RECORDAR QUE ESTA MISMO TIM QUE SERVO(CAMBIAR)
 //    htim2.Instance->CCR1 = 80; //duty cycle de 80
 //}
@@ -83,34 +49,14 @@ extern uint32_t value_adc[3]; // almacenar datos adc
 //    htim2.Instance->CCR1 = 0; //duty cycle de 0
 //}
 
-/* USER CODE END 0 */
-
 /**
   * @brief  The application entry point.
   * @retval int
   */
 int main(void)
 {
-  /* USER CODE BEGIN 1 */
 
-  /* USER CODE END 1 */
-
-  /* MCU Configuration--------------------------------------------------------*/
-
-  /* Reset of all peripherals, Initializes the Flash interface and the Systick. */
     BSP_Init();
-  /* USER CODE BEGIN Init */
-  /* USER CODE END Init */
-
-  /* Configure the system clock */
-
-  /* USER CODE BEGIN SysInit */
-
-  /* USER CODE END SysInit */
-
-  /* Initialize all configured peripherals */
-
-  /* USER CODE BEGIN 2 */
 
   ///1)set time
   /// // sTime.Hours = 21;
@@ -128,13 +74,15 @@ int main(void)
 
 //empezar el pwm
 
-HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_1);
 
+HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_1);
 
     HAL_GPIO_WritePin(GPIOC, GPIO_PIN_3, GPIO_PIN_SET);
     
     HAL_GPIO_WritePin(GPIOD, GPIO_PIN_4, GPIO_PIN_RESET); //  ENA1
     HAL_GPIO_WritePin(GPIOC, GPIO_PIN_12, GPIO_PIN_RESET); //  ENA2
+
+
 
     LCD_i2cDeviceCheck();
     LCD_Init();
@@ -157,15 +105,9 @@ HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_1);
     int rangohmin = 50;
     int rangohmax = 60;            //REVISAR RANGO INICIAL DE HUMEDAD
 
-  /* USER CODE END 2 */
-
-  /* Infinite loop */
-  /* USER CODE BEGIN WHILE */
   while (1)
   {
-    /* USER CODE END WHILE */
 
-    /* USER CODE BEGIN 3 */
       htim2.Instance->CCR1 = 50; //ANGULO 45 GRADOS REVISAR SI NO ROME SERVO ESTANDO EN BUCLE
 ///Teclado
     tecla = keypad_read();
@@ -447,7 +389,7 @@ HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_1);
     }
 
   }
-  /* USER CODE END 3 */
+
 }
 
 #ifdef  USE_FULL_ASSERT

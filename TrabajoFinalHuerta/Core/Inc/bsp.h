@@ -9,8 +9,6 @@
 
 #define LD4_Pin GPIO_PIN_12
 
-
-
 void BSP_Init(void);
 void BSP_LCD_Temperature(float);
 void BSP_LCD_Humidity(float);
