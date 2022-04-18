@@ -56,7 +56,8 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim){  //Duda si anda est
         if(App_100msTimeout){
             App_100msTimeout--;
             APP_Timer100ms();
-            //Codigo
+
+            //codigo
         }
     }
     if(App_10msTimeout){

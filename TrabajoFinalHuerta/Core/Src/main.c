@@ -292,10 +292,7 @@ HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_1);
         }
         }
 ///DHT22
-    LCD_Clear();
-    DHT_GetData(&DHT22);
-    BSP_LCD_Temperature(DHT22.Temperature);
-    BSP_LCD_Humidity(DHT22.Humidity);
+      APP_Display_DHT22();
 
 ///Sensor humedad de suelo
     HAL_ADC_Start(&hadc1);
@@ -408,7 +405,12 @@ void APP_Timer10s(){
 
 }
 
-
+void APP_Display_DHT22(){
+    LCD_Clear();
+    DHT_GetData(&DHT22);
+    BSP_LCD_Temperature(DHT22.Temperature);
+    BSP_LCD_Humidity(DHT22.Humidity);
+}
 
 
 
