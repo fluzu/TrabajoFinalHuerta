@@ -377,7 +377,7 @@ void APP_Show_SystemIntro(){
     LCD_SetCursor(1,1);
     LCD_Clear();
     LCD_Print("Cargando Datos",1);
-    HAL_Delay(4000);
+    BSP_Delay(4000);
     LCD_Clear();
 }
 

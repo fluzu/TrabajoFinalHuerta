@@ -10,6 +10,7 @@
 #define LD4_Pin GPIO_PIN_12
 
 void BSP_Init(void);
+void BSP_Delay(uint32_t Delay);
 void BSP_LCD_Temperature(float);
 void BSP_LCD_Humidity(float);
 uint32_t BSP_Get_percentageHS(uint32_t);

@@ -80,6 +80,10 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim){  //Duda si anda est
     }
 }
 
+void BSP_Delay(uint32_t Delay){
+    HAL_Delay(Delay);
+}
+
 void BSP_LCD_Temperature(float temperatura) {
     LCD_SetCursor(1, 4);
     LCD_Print("Grados:%0.0fC", temperatura);
