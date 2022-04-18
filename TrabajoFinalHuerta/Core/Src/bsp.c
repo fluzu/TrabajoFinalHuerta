@@ -1,10 +1,9 @@
-//
-// Created by Facu on 13/04/2022.
-//
+
 #include "lcd_i2cModule.h"
 #include "Timer_Delay.h"
 #include "DHT.h"
 #include "keypad.h"
+#include "output.h"
 #include "bsp.h"
 #include "main.h"
 
@@ -40,7 +39,7 @@ void BSP_Init() {
     TimerDelay_Init();
     LCD_Init();
     keypad_init();
-
+    //BSP_Output_Init();
 }
 
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim){  //Duda si anda este callback

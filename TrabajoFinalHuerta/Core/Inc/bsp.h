@@ -1,6 +1,4 @@
-//
-// Created by Facu on 13/04/2022.
-//
+
 
 #ifndef TESTLCDI2C_BSP_H
 #define TESTLCDI2C_BSP_H

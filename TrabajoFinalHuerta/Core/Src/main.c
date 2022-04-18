@@ -4,6 +4,14 @@
 #include "DHT.h"
 #include "keypad.h"
 
+void *DriverMotor_ENA;
+void *DriverMotor_IN1;
+void *DriverMotor_IN2;
+
+void *DriverValve_ENA;
+void *DriverValve_IN1;
+void *DriverValve_IN2;
+
 extern ADC_HandleTypeDef hadc1;
 extern DMA_HandleTypeDef hdma_adc1;  //INCECESARIO??????
 extern I2C_HandleTypeDef hi2c1;       //INCECESARIO??????
