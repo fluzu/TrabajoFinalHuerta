@@ -20,7 +20,8 @@ void HAL_TIM_MspPostInit(TIM_HandleTypeDef *htim);
 
 void Error_Handler(void);
 
-void APP_Display_DHT22();
+void APP_Show_SystemIntro();
+void APP_Show_DHT22();
 
 #define LD4_Pin GPIO_PIN_12
 #define LD4_GPIO_Port GPIOD

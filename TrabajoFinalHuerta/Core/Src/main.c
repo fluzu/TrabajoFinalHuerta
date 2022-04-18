@@ -1,44 +1,18 @@
 
-/**
-  ******************************************************************************
-  * @file           : main.c
-  * @brief          : Main program body
-  ******************************************************************************
-  * @attention
-  *
-  *
-  * <h2><center>&copy; Copyright (c) 2020 STMicroelectronics.
-  * All rights reserved.</center></h2>
-  *
-  * This software component is licensed by ST under BSD 3-Clause license,
-  * the "License"; You may not use this file except in compliance with the
-  * License. You may obtain a copy of the License at:
-  *                        opensource.org/licenses/BSD-3-Clause
-  *
-  ******************************************************************************
-  */
-
 #include "main.h"
 #include "bsp.h"
-
 #include "lcd_i2cModule.h"
 #include "Timer_Delay.h"
 #include "DHT.h"
 #include "keypad.h"
 
-
 extern ADC_HandleTypeDef hadc1;
 extern DMA_HandleTypeDef hdma_adc1;  //INCECESARIO??????
-
 extern I2C_HandleTypeDef hi2c1;       //INCECESARIO??????
-
 extern RTC_HandleTypeDef hrtc;
-
 extern TIM_HandleTypeDef htim2;
-extern TIM_HandleTypeDef htim3;     //INCECESARIO??????
-
+extern TIM_HandleTypeDef htim3;     //INCECESARIO?????
 extern DHT_DataTypeDef DHT22;
-
 extern uint32_t value_adc[3]; // almacenar datos adc
 
 //void buzzer_on(void) {                   //RECORDAR QUE ESTA MISMO TIM QUE SERVO(CAMBIAR)
@@ -53,11 +27,11 @@ extern uint32_t value_adc[3]; // almacenar datos adc
   * @brief  The application entry point.
   * @retval int
   */
-int main(void)
-{
+int main(void){
 
     BSP_Init();
 
+    APP_Show_SystemIntro();
   ///1)set time
   /// // sTime.Hours = 21;
 //  sTime.Minutes = 56;
@@ -70,12 +44,12 @@ int main(void)
 //  sDate.Year = 20;
 //  HAL_RTC_SetDate(&hrtc, &sDate, RTC_FORMAT_BIN);
 
-  HAL_Delay(200);   //REVISAR
+  //HAL_Delay(200);   //REVISAR
 
-//empezar el pwm
+///empezar el pwm
 
 
-HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_1);
+    HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_1);
 
     HAL_GPIO_WritePin(GPIOC, GPIO_PIN_3, GPIO_PIN_SET);
     
@@ -84,19 +58,11 @@ HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_1);
 
 
 
-    LCD_i2cDeviceCheck();
-    LCD_Init();
-    LCD_BackLight(LCD_BL_ON);
-    LCD_SetCursor(1,1);
-    LCD_Clear();
-    LCD_Print("Cargando Datos",1);
-    HAL_Delay(4000);
-    LCD_Clear();
+
 
 
 
     char tecla;
- //   keypad_init();
 
     int AMoPM = 0;
     int hora_de_riego = 0;
@@ -292,7 +258,7 @@ HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_1);
         }
         }
 ///DHT22
-      APP_Display_DHT22();
+      APP_Show_DHT22();
 
 ///Sensor humedad de suelo
     HAL_ADC_Start(&hadc1);
@@ -405,8 +371,18 @@ void APP_Timer10s(){
 
 }
 
-void APP_Display_DHT22(){
+void APP_Show_SystemIntro(){
+    LCD_i2cDeviceCheck();
+    LCD_BackLight(LCD_BL_ON);
+    LCD_SetCursor(1,1);
     LCD_Clear();
+    LCD_Print("Cargando Datos",1);
+    HAL_Delay(4000);
+    LCD_Clear();
+}
+
+void APP_Show_DHT22(){
+    LCD_Clear();  //REVISAR necesidad de esta funcion
     DHT_GetData(&DHT22);
     BSP_LCD_Temperature(DHT22.Temperature);
     BSP_LCD_Humidity(DHT22.Humidity);
@@ -431,4 +407,3 @@ void assert_failed(uint8_t *file, uint32_t line)
 }
 #endif /* USE_FULL_ASSERT */
 
-/************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/
