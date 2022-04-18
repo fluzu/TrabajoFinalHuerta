@@ -246,7 +246,6 @@ CMakeFiles/TestLCDi2c.elf.dir/Core/Src/lcd_i2cModule.c.obj
  C:/Users/Facu/Documents/TRABAJO FINAL/TrabajoFinalHuerta/TrabajoFinalHuerta/Core/Src/lcd_i2cModule.c
 CMakeFiles/TestLCDi2c.elf.dir/Core/Src/main.c.obj
  ../Core/Inc/DHT.h
- ../Core/Inc/Timer_Delay.h
  ../Core/Inc/bsp.h
  ../Core/Inc/keypad.h
  ../Core/Inc/lcd_i2cModule.h

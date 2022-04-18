@@ -1,8 +1,6 @@
-
 #include "main.h"
 #include "bsp.h"
 #include "lcd_i2cModule.h"
-#include "Timer_Delay.h"
 #include "DHT.h"
 #include "keypad.h"
 
@@ -13,6 +11,7 @@ extern RTC_HandleTypeDef hrtc;
 extern TIM_HandleTypeDef htim2;
 extern TIM_HandleTypeDef htim3;     //INCECESARIO?????
 extern DHT_DataTypeDef DHT22;
+
 extern uint32_t value_adc[3]; // almacenar datos adc
 
 //void buzzer_on(void) {                   //RECORDAR QUE ESTA MISMO TIM QUE SERVO(CAMBIAR)
@@ -32,6 +31,7 @@ int main(void){
     BSP_Init();
 
     APP_Show_SystemIntro();
+
   ///1)set time
   /// // sTime.Hours = 21;
 //  sTime.Minutes = 56;

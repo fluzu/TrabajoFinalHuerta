@@ -80,8 +80,8 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim){  //Duda si anda est
     }
 }
 
-void BSP_Delay(uint32_t Delay){
-    HAL_Delay(Delay);
+void BSP_Delay(uint16_t Delay){
+    delay_ms(Delay);
 }
 
 void BSP_LCD_Temperature(float temperatura) {
