@@ -106,6 +106,37 @@ uint32_t BSP_Get_percentageHS(uint32_t value){
     return 100 - ((value * hummaxp) / (hummin - hummax));
 }
 
+void BSP_Detect_Movement(){
+    if ((HAL_GPIO_ReadPin (GPIOA, GPIO_PIN_2))) {  //si el pin esta en alto
+        //buzzer_on();  //suena el buzzer
+        HAL_GPIO_WritePin(GPIOD, GPIO_PIN_12, GPIO_PIN_SET); //Encender led verde
+        LCD_Clear();
+        LCD_SetCursor(2, 4);
+        LCD_Print("Movimiento", 1);   // Durante toda la espera con cortina cerrada?
+        HAL_Delay(1000);
+        LCD_Clear();
+
+//        if (estado_cortina == 0 && cortina_manual == 0) {        //flag para ver si la cortina esta abierta o cerrada  REVISAR cortina manual
+//            HAL_GPIO_WritePin(GPIOD, GPIO_PIN_4, GPIO_PIN_SET); //  ENA
+//            HAL_GPIO_WritePin(GPIOD, GPIO_PIN_3, GPIO_PIN_SET); //  IN1
+//            HAL_GPIO_WritePin(GPIOD, GPIO_PIN_2, GPIO_PIN_RESET); //  IN2
+//            while ( !HAL_GPIO_ReadPin(GPIOE, GPIO_PIN_5));   //espera hasta que la cortina toque fin de carrera                                              //VER CUANTO TIEMPO DEMORA EN CERRAR CORTINA
+//            HAL_GPIO_WritePin(GPIOD, GPIO_PIN_4, GPIO_PIN_RESET); //  ENA
+
+//            HAL_Delay(20000);                                              //20 segundos espera cerrada para volver a abrir
+//            HAL_GPIO_WritePin(GPIOD, GPIO_PIN_4, GPIO_PIN_SET);       //  ENA
+//            HAL_GPIO_WritePin(GPIOD, GPIO_PIN_3, GPIO_PIN_RESET);     //  IN1
+//            HAL_GPIO_WritePin(GPIOD, GPIO_PIN_2, GPIO_PIN_SET);       //  IN2
+//            while (!HAL_GPIO_ReadPin(GPIOE, GPIO_PIN_3));   //espera hasta que la cortina toque fin de carrera                                                  //VER CUANTO TIEMPO DEMORA EN ABRIR CORTINA
+//            HAL_GPIO_WritePin(GPIOD, GPIO_PIN_4, GPIO_PIN_RESET);     //  ENA
+//        }
+//        while (HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_2));   //espera hasta que el pir se apague
+
+        //buzzer_off(); //se apaga el buffer
+        HAL_GPIO_WritePin(GPIOD,GPIO_PIN_12,GPIO_PIN_RESET); //se apaga el led verde
+    }
+}
+
 /**
   * @brief System Clock Configuration
   * @retval None
@@ -530,8 +561,6 @@ static void MX_GPIO_Init(void)
 
 }
 
-/* USER CODE BEGIN 4 */
-/* USER CODE END 4 */
 
 /**
   * @brief  This function is executed in case of error occurrence.
@@ -588,9 +617,10 @@ extern void *DriverValve_IN1;
 extern void *DriverValve_IN2;
 
 void BSP_Output_Init(){
-    GPIO_InitTypeDef GPIO_InitStruct;
+    GPIO_InitTypeDef GPIO_InitStruct = {0};
 
-    __HAL_RCC_GPIOA_CLK_ENABLE();
+    __HAL_RCC_GPIOD_CLK_ENABLE();
+    __HAL_RCC_GPIOC_CLK_ENABLE();
 
     GPIO_InitStruct.Pin 	= CoveringDriverMotor_ENA_Pin|CoveringDriverMotor_IN1_Pin|CoveringDriverMotor_IN2_Pin|ValveDriver_ENA_Pin|ValveDriver_IN1_Pin|ValveDriver_IN2_Pin;
     GPIO_InitStruct.Mode 	= GPIO_MODE_OUTPUT_PP;

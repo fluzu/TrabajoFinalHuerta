@@ -22,6 +22,7 @@ void Error_Handler(void);
 
 void APP_Show_SystemIntro();
 void APP_Show_DHT22();
+void APP_Show_Movement();
 
 #define LD4_Pin GPIO_PIN_12
 #define LD4_GPIO_Port GPIOD

@@ -261,6 +261,8 @@ int main(void){
 ///DHT22
       APP_Show_DHT22();
 
+
+
 ///Sensor humedad de suelo
     HAL_ADC_Start(&hadc1);
      if(HAL_ADC_PollForConversion(&hadc1, 5) == HAL_OK){     //incilur esta parte en el solenoide para hecr while?
@@ -271,8 +273,10 @@ int main(void){
       LCD_SetCursor(2, 10);
       LCD_Print("HS:%0.0f%%", value_adc[0]);  //REVISAR
 
-      HAL_Delay(2000);
-
+     HAL_Delay(3000);
+      //LCD_Clear();
+      ///Sensor movimiento
+      APP_Show_Movement();
 
 ///Cerrar o abrir cortina por temperatura
       if(DHT22.Temperature < 6) {           //se puede optimizar preguntando con dos condiciones?
@@ -323,34 +327,6 @@ int main(void){
       }
       while (value_adc[0] <= rangohmax && value_adc[0] >= rangohmin);
            HAL_GPIO_WritePin(GPIOC, GPIO_PIN_12, GPIO_PIN_RESET); //  ENA
-///Sensor movimiento
-    if ((HAL_GPIO_ReadPin (GPIOA, GPIO_PIN_2))) {  //si el pin esta en alto
-        //buzzer_on();  //suena el buzzer
-        HAL_GPIO_WritePin(GPIOD, GPIO_PIN_12, GPIO_PIN_SET); //Encender led verde
-        LCD_Clear();
-        LCD_SetCursor(2, 4);
-        LCD_Print("Movimiento", 1);   // Durante toda la espera con cortina cerrada?
-        HAL_Delay(1000);
-
-//        if (estado_cortina == 0 && cortina_manual == 0) {        //flag para ver si la cortina esta abierta o cerrada  REVISAR cortina manual
-//            HAL_GPIO_WritePin(GPIOD, GPIO_PIN_4, GPIO_PIN_SET); //  ENA
-//            HAL_GPIO_WritePin(GPIOD, GPIO_PIN_3, GPIO_PIN_SET); //  IN1
-//            HAL_GPIO_WritePin(GPIOD, GPIO_PIN_2, GPIO_PIN_RESET); //  IN2
-//            while ( !HAL_GPIO_ReadPin(GPIOE, GPIO_PIN_5));   //espera hasta que la cortina toque fin de carrera                                              //VER CUANTO TIEMPO DEMORA EN CERRAR CORTINA
-//            HAL_GPIO_WritePin(GPIOD, GPIO_PIN_4, GPIO_PIN_RESET); //  ENA
-
-//            HAL_Delay(20000);                                              //20 segundos espera cerrada para volver a abrir
-//            HAL_GPIO_WritePin(GPIOD, GPIO_PIN_4, GPIO_PIN_SET);       //  ENA
-//            HAL_GPIO_WritePin(GPIOD, GPIO_PIN_3, GPIO_PIN_RESET);     //  IN1
-//            HAL_GPIO_WritePin(GPIOD, GPIO_PIN_2, GPIO_PIN_SET);       //  IN2
-//            while (!HAL_GPIO_ReadPin(GPIOE, GPIO_PIN_3));   //espera hasta que la cortina toque fin de carrera                                                  //VER CUANTO TIEMPO DEMORA EN ABRIR CORTINA
-//            HAL_GPIO_WritePin(GPIOD, GPIO_PIN_4, GPIO_PIN_RESET);     //  ENA
-//        }
-//        while (HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_2));   //espera hasta que el pir se apague
-
-        //buzzer_off(); //se apaga el buffer
-        HAL_GPIO_WritePin(GPIOD,GPIO_PIN_12,GPIO_PIN_RESET); //se apaga el led verde
-    }
 
   }
 
@@ -389,6 +365,9 @@ void APP_Show_DHT22(){
     BSP_LCD_Humidity(DHT22.Humidity);
 }
 
+void APP_Show_Movement(){
+    BSP_Detect_Movement();
+}
 
 
 #ifdef  USE_FULL_ASSERT
