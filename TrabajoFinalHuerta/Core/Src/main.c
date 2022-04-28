@@ -271,10 +271,10 @@ int main(void){
 
 ///Cerrar o abrir cortina por temperatura
 
-      APP_CoverFromTemperature();
+      APP_CoverFromTemperature(estado_cortina, cortina_manual);
 
 ///Valvula solenoide riego
-    APP_Irrigation();
+   APP_Irrigation(rangohmin, rangohmax);
 
   }
 
@@ -317,16 +317,16 @@ void APP_Show_Movement(){
     BSP_Detect_Movement();
 }
 
-void APP_CoverFromTemperature(){
-    BSP_CoverFromTemperature();
+void APP_CoverFromTemperature(int estado_cortina, int cortina_manual){
+    BSP_CoverFromTemperature(estado_cortina, cortina_manual);
 }
 
 void APP_Show_SoilHumidity(){
     BSP_Show_SoilHumidity();
 }
 
-void APP_Irrigation(){
-    BSP_Irrigation();
+void APP_Irrigation(int rangohmin, int rangohmax){
+    BSP_Irrigation(rangohmin, rangohmax);
 }
 
 #ifdef  USE_FULL_ASSERT

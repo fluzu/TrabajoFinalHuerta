@@ -8,10 +8,7 @@
 #include "main.h"
 
 uint32_t value_adc[3]; // Revisar capaz no anda sensor inicialicacion aca
-int estado_cortina = 0;
-int cortina_manual = 0;        //bandera si se presiona de manera manual la cortina
-extern int rangohmin = 50;
-extern int rangohmax = 60;  ///ARREGLAR QUE DA ERROR
+
 
 ADC_HandleTypeDef hadc1;
 DMA_HandleTypeDef hdma_adc1;
@@ -141,7 +138,7 @@ void BSP_Detect_Movement(){
     }
 }
 
-void BSP_CoverFromTemperature(){
+void BSP_CoverFromTemperature(int estado_cortina, int cortina_manual){
     if(DHT22.Temperature < 6) {           //se puede optimizar preguntando con dos condiciones?
         if (estado_cortina == 0 && cortina_manual == 0)
         {        //flag para ver si la cortina esta abierta o cerrada  REVISAR cortina manual
@@ -185,7 +182,7 @@ void BSP_Show_SoilHumidity(){
     //LCD_Clear();
 }
 
-void BSP_Irrigation(){
+void BSP_Irrigation(int rangohmin, int rangohmax){
 
 
                 //REVISAR RANGO INICIAL DE HUMEDAD

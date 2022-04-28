@@ -23,9 +23,9 @@ void Error_Handler(void);
 void APP_Show_SystemIntro();
 void APP_Show_DHT22();
 void APP_Show_Movement();
-void APP_CoverFromTemperature();
+void APP_CoverFromTemperature(int estado_cortina, int cortina_manual);
 void APP_Show_SoilHumidity();
-void APP_Irrigation();
+void APP_Irrigation(int rangohmin, int rangohmax);
 
 #define LD4_Pin GPIO_PIN_12
 #define LD4_GPIO_Port GPIOD
