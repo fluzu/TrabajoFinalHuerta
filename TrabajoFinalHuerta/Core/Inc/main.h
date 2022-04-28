@@ -21,6 +21,7 @@ void HAL_TIM_MspPostInit(TIM_HandleTypeDef *htim);
 void Error_Handler(void);
 
 void APP_Show_SystemIntro();
+void APP_Keypad(int rangohmin, int rangohmax, int estado_cortina, int cortina_manual);
 void APP_Show_DHT22();
 void APP_Show_Movement();
 void APP_CoverFromTemperature(int estado_cortina, int cortina_manual);

@@ -7,8 +7,7 @@
 #include "bsp.h"
 #include "main.h"
 
-uint32_t value_adc[3]; // Revisar capaz no anda sensor inicialicacion aca
-
+uint32_t value_adc[3];
 
 ADC_HandleTypeDef hadc1;
 DMA_HandleTypeDef hdma_adc1;
@@ -41,6 +40,11 @@ void BSP_Init() {
     LCD_Init();
     keypad_init();
     //BSP_Output_Init();
+
+    HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_1); // Init PWM
+
+    HAL_GPIO_WritePin(GPIOD, GPIO_PIN_4, GPIO_PIN_RESET); //  ENA1
+    HAL_GPIO_WritePin(GPIOC, GPIO_PIN_12, GPIO_PIN_RESET); //  ENA2
 }
 
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim){  //Duda si anda este callback
@@ -206,6 +210,192 @@ void BSP_Irrigation(int rangohmin, int rangohmax){
     while (value_adc[0] <= rangohmax && value_adc[0] >= rangohmin);
     HAL_GPIO_WritePin(GPIOC, GPIO_PIN_12, GPIO_PIN_RESET); //  ENA
 }
+
+void BSP_Keypad(int rangohmin, int rangohmax, int estado_cortina, int cortina_manual){
+    int tecla;
+    tecla = keypad_read();
+    LCD_Clear();
+    if (tecla != 0){
+        switch (tecla) {
+            case 65:
+                LCD_Clear();
+                LCD_SetCursor(1, 5);
+                LCD_Print("MINIMO:", 1);
+                HAL_Delay(2000);
+                do {                                         //REVISAR
+                    tecla = keypad_read();                  //DUDA NECESARIO PRESIONADO EN EL MOMENTO JUSTO?
+                    switch (tecla) {
+                        case 49: rangohmin = 10; break;
+                        case 50: rangohmin = 20; break;
+                        case 51: rangohmin = 30; break;
+                        case 52: rangohmin = 40; break;
+                        case 53: rangohmin = 50; break;
+                        case 54: rangohmin = 60; break;
+                        case 55: rangohmin = 70; break;
+                        case 56: rangohmin = 80; break;
+                        case 57: rangohmin = 90; break;
+                        case 48: rangohmin =  0; break;
+                        default: rangohmin = 100;              //FALTA CASO 100
+                    }
+                } while (tecla == 0 || rangohmin == 100);             //VER MAS CASOS // oscioso dos veces 100 porciento
+                LCD_SetCursor(1, 5);
+                LCD_Print("MINIMO:%0.0f", rangohmin);
+                LCD_SetCursor(2, 5);
+                LCD_Print("MAXIMO:", 1);
+                do {
+                    tecla = keypad_read();                  //DUDA NECESARIO PRESIONADO EN EL MOMENTO JUSTO?
+                    switch (tecla) {                         //REVISAR
+                        case 49: rangohmax = 10; break;
+                        case 50: rangohmax = 20; break;
+                        case 51: rangohmax = 30; break;
+                        case 52: rangohmax = 40; break;
+                        case 53: rangohmax = 50; break;         //FALTA DEFAULT??
+                        case 54: rangohmax = 60; break;
+                        case 55: rangohmax = 70; break;
+                        case 56: rangohmax = 80; break;
+                        case 57: rangohmax = 90; break;
+                        case 48: rangohmax =  0; break;
+                        default: rangohmax = 100;               //FALTA CASO 100
+                    }                                           //FALTA CASO ERROR QUE SEA MENOR AL MÍNIMO
+                } while (tecla == 0 || rangohmax <= rangohmin);   //REVISAR NO HACE EFECTO
+                LCD_SetCursor(2, 5);
+                LCD_Print("MAXIMO:%0.0f", rangohmax);
+                HAL_Delay(4000);
+                break;
+            case 49:
+                LCD_SetCursor(2, 1);
+                LCD_Print("Ingreso 1", 1);
+                HAL_Delay(2000);
+                break;
+            case 50:
+                LCD_SetCursor(2, 1);
+                LCD_Print("Ingreso 2", 1);
+                HAL_Delay(2000);
+                break;
+            case 51:
+                LCD_SetCursor(2, 1);
+                LCD_Print("Ingreso 3", 1);
+                HAL_Delay(2000);
+                break;
+            case 52:
+                LCD_SetCursor(2, 1);
+                LCD_Print("Ingreso 4", 1);
+                HAL_Delay(2000);
+                break;
+            case 53:
+                LCD_SetCursor(2, 1);
+                LCD_Print("Ingreso 5", 1);
+                HAL_Delay(2000);
+                break;
+            case 54:
+                LCD_SetCursor(2, 1);
+                LCD_Print("Ingreso 6", 1);
+                HAL_Delay(2000);
+                break;
+            case 66:                                //TECLA 'B'
+//                LCD_SetCursor(1, 1);
+//                LCD_Send_String("Ingrese 1 por AM/2 por PM", STR_NOSLIDE);
+//                do {
+//                    tecla = keypad_read();
+//                    switch (tecla) {
+//                        case 0:             break;   //buen metodo?
+//                        case 49: AMoPM = 1; break;
+//                        case 50: AMoPM = 2; break;
+//                        default:
+//                            LCD_Clear();
+//                            LCD_SetCursor(1, 1);
+//                           HAL_Delay(3000);
+//                            LCD_Clear();
+//                            LCD_SetCursor(1, 1);
+//                            LCD_Send_String("Ingrese 1 por AM/2 por PM", STR_NOSLIDE);
+//                    }
+//                } while (AMoPM != 1 && AMoPM != 2);
+//                if (AMoPM == 1){
+//                    LCD_SetCursor(1, 1);
+//                    LCD_Send_String("Ingrese hora de riego", STR_NOSLIDE);
+//                    do {
+//                        tecla = keypad_read();
+//                        switch (tecla) {
+//                            case 49:
+//                                                                  //PROBLEMA
+//                                hora_de_riego = 1;
+//                                break;
+//                            case 50: hora_de_riego = 2; break;
+//                            case 51: hora_de_riego = 3; break;
+//                            case 52: hora_de_riego = 4; break;
+//                            case 53: hora_de_riego = 5; break;
+//                            case 54: hora_de_riego = 6; break;
+//                            case 55: hora_de_riego = 7; break;
+//                            case 56: hora_de_riego = 8; break;
+//                            case 57: hora_de_riego = 9; break;
+                //case 48: hora_de_riego =  0; break;
+//                        }
+//                    } while (tecla == 0);
+//                }
+//                if (AMoPM == 2){
+
+//                }
+                break;
+            case 55:
+                LCD_SetCursor(2, 1);
+                LCD_Print("Ingreso 7", 1);
+                HAL_Delay(2000);
+                break;
+            case 56:
+                LCD_SetCursor(2, 1);
+                LCD_Print("Ingreso 8", 1);
+                HAL_Delay(2000);
+                break;
+            case 57:
+                LCD_SetCursor(2, 1);
+                LCD_Print("Ingreso 9", 1);
+                HAL_Delay(2000);
+                break;
+            case 67:                                             //TECLA 'C'
+                LCD_SetCursor(2, 5);
+                LCD_Print("PESTICIDA", 1);
+                htim2.Instance->CCR1 = 75; //ANGULO 90 GRADOS
+                HAL_Delay(4000);
+                break;
+            case 68:                                             //TECLA 'D'
+                if(estado_cortina == 0) {       //flag para ver si la cortina esta abierta o cerrada
+                    LCD_SetCursor(2, 1);
+                    LCD_Print("CERRANDO CORTINA", 1);
+                    HAL_GPIO_WritePin(GPIOD, GPIO_PIN_4, GPIO_PIN_SET); //  ENA
+                    HAL_GPIO_WritePin(GPIOD, GPIO_PIN_3, GPIO_PIN_SET); //  IN1
+                    HAL_GPIO_WritePin(GPIOD, GPIO_PIN_2, GPIO_PIN_RESET); //  IN2
+                    while (!HAL_GPIO_ReadPin(GPIOE, GPIO_PIN_5));   //espera hasta que la cortina toque fin de carrera con pull up
+                    HAL_GPIO_WritePin(GPIOD, GPIO_PIN_4, GPIO_PIN_RESET); //  ENA
+                    estado_cortina = 1;                                                  //cambio de estado
+                    if (cortina_manual == 0)   //revisar
+                        cortina_manual = 1;        //bandera para saber si se quiere de manera manual la cortina abierta
+                    else
+                        cortina_manual = 0;
+                }
+                else {
+                    LCD_SetCursor(2, 1);
+                    LCD_Print("ABRIENDO CORTINA", 1);
+                    HAL_GPIO_WritePin(GPIOD, GPIO_PIN_4, GPIO_PIN_SET); //  ENA
+                    HAL_GPIO_WritePin(GPIOD, GPIO_PIN_3, GPIO_PIN_RESET); //  IN1
+                    HAL_GPIO_WritePin(GPIOD, GPIO_PIN_2, GPIO_PIN_SET); //  IN2
+                    while (!HAL_GPIO_ReadPin(GPIOE, GPIO_PIN_3));   //espera hasta que la cortina toque fin de carrera con pull up
+                    HAL_GPIO_WritePin(GPIOD, GPIO_PIN_4, GPIO_PIN_RESET); //  ENA
+                    estado_cortina = 0;                                           //cambio de estado
+                    if (cortina_manual == 0)   //revisar
+                        cortina_manual = 1;
+                    else
+                        cortina_manual = 0;    //bandera para saber si se quiere de manera manual la cortina abierta
+                }
+                break;
+            case 48:
+                LCD_SetCursor(2, 1);
+                LCD_Print("Ingreso 0", 1);
+                HAL_Delay(2000);
+                break;
+        }
+    }
+}
+
 /**
   * @brief System Clock Configuration
   * @retval None
