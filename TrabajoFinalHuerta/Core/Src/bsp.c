@@ -8,6 +8,10 @@
 #include "main.h"
 
 uint32_t value_adc[3]; // Revisar capaz no anda sensor inicialicacion aca
+int estado_cortina = 0;
+int cortina_manual = 0;        //bandera si se presiona de manera manual la cortina
+extern int rangohmin = 50;
+extern int rangohmax = 60;  ///ARREGLAR QUE DA ERROR
 
 ADC_HandleTypeDef hadc1;
 DMA_HandleTypeDef hdma_adc1;
@@ -137,6 +141,74 @@ void BSP_Detect_Movement(){
     }
 }
 
+void BSP_CoverFromTemperature(){
+    if(DHT22.Temperature < 6) {           //se puede optimizar preguntando con dos condiciones?
+        if (estado_cortina == 0 && cortina_manual == 0)
+        {        //flag para ver si la cortina esta abierta o cerrada  REVISAR cortina manual
+            LCD_Clear();
+            LCD_SetCursor(2, 1);
+            LCD_Print("CERRANDO CORTINA", 1);
+            HAL_GPIO_WritePin(GPIOD, GPIO_PIN_4, GPIO_PIN_SET); //  ENA
+            HAL_GPIO_WritePin(GPIOD, GPIO_PIN_3, GPIO_PIN_SET); //  IN1
+            HAL_GPIO_WritePin(GPIOD, GPIO_PIN_2, GPIO_PIN_RESET); //  IN2
+            while ( !HAL_GPIO_ReadPin(GPIOE, GPIO_PIN_5));   //espera hasta que la cortina toque fin de carrera                                              //VER CUANTO TIEMPO DEMORA EN CERRAR CORTINA
+            HAL_GPIO_WritePin(GPIOD, GPIO_PIN_4, GPIO_PIN_RESET); //  ENA
+            estado_cortina = 1;                                                  //cambio de estado
+        }
+    }
+    else{
+        if (estado_cortina == 1 && cortina_manual == 0) {
+            LCD_Clear();
+            LCD_SetCursor(2, 1);
+            LCD_Print("ABRIENDO CORTINA", 1);
+            HAL_GPIO_WritePin(GPIOD, GPIO_PIN_4, GPIO_PIN_SET);       //  ENA
+            HAL_GPIO_WritePin(GPIOD, GPIO_PIN_3, GPIO_PIN_RESET);     //  IN1
+            HAL_GPIO_WritePin(GPIOD, GPIO_PIN_2, GPIO_PIN_SET);       //  IN2
+            while (!HAL_GPIO_ReadPin(GPIOE, GPIO_PIN_3));   //espera hasta que la cortina toque fin de carrera                                                  //VER CUANTO TIEMPO DEMORA EN ABRIR CORTINA
+            HAL_GPIO_WritePin(GPIOD, GPIO_PIN_4, GPIO_PIN_RESET);     //  ENA
+            estado_cortina = 0;                                                    //cambio de estado
+        }
+    }
+}
+
+void BSP_Show_SoilHumidity(){
+    HAL_ADC_Start(&hadc1);
+    if(HAL_ADC_PollForConversion(&hadc1, 5) == HAL_OK){     //incilur esta parte en el solenoide para hecr while?
+        value_adc[0] = HAL_ADC_GetValue(&hadc1);
+        value_adc[0] = BSP_Get_percentageHS(value_adc[0]);
+        HAL_ADC_Stop(&hadc1);
+    }
+    LCD_SetCursor(2, 10);
+    LCD_Print("HS:%0.0f%%", value_adc[0]);  //REVISAR
+
+    HAL_Delay(3000);
+    //LCD_Clear();
+}
+
+void BSP_Irrigation(){
+
+
+                //REVISAR RANGO INICIAL DE HUMEDAD
+    LCD_Clear();
+    do {                                  //ver caso si se quiere regar durante movimiento
+        HAL_ADC_Start(&hadc1);
+        if(HAL_ADC_PollForConversion(&hadc1, 5) == HAL_OK){
+            value_adc[0] = HAL_ADC_GetValue(&hadc1);
+            value_adc[0] = BSP_Get_percentageHS(value_adc[0]);
+            HAL_ADC_Stop(&hadc1);
+        }
+        if (value_adc[0] < rangohmax && value_adc[0] > rangohmin) {//revisar hacer con while
+            LCD_SetCursor(2, 5);
+            LCD_Print("REGANDO", 1);
+            HAL_GPIO_WritePin(GPIOC, GPIO_PIN_12, GPIO_PIN_SET);   //  ENA
+            HAL_GPIO_WritePin(GPIOC, GPIO_PIN_11, GPIO_PIN_SET);   //  IN1
+            HAL_GPIO_WritePin(GPIOC, GPIO_PIN_10, GPIO_PIN_RESET); //  IN2
+
+        }
+    }
+    while (value_adc[0] <= rangohmax && value_adc[0] >= rangohmin);
+    HAL_GPIO_WritePin(GPIOC, GPIO_PIN_12, GPIO_PIN_RESET); //  ENA
+}
 /**
   * @brief System Clock Configuration
   * @retval None

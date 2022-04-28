@@ -31,6 +31,9 @@ void BSP_LCD_Temperature(float);
 void BSP_LCD_Humidity(float);
 uint32_t BSP_Get_percentageHS(uint32_t);
 void BSP_Detect_Movement();
+void BSP_CoverFromTemperature();
+void BSP_Show_SoilHumidity();
+void BSP_Irrigation();
 
 void Error_Handler(void);
 void HAL_TIM_MspPostInit(TIM_HandleTypeDef *htim);
